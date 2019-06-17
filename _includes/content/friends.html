@@ -1,0 +1,69 @@
+<style>
+.k-friend {
+    text-decoration: none;
+}
+
+.k-head-card-media{
+display: block
+cursor: pointer;
+max-height: 284px;
+min-height: 284px;
+background-position: 50% 50%;
+background-size: cover;
+background-color: white;
+}
+
+.k-head-card-media a{
+text-decoration: none;
+}
+
+.k-head-card-content .mdui-card-header-title{
+line-height: 40px;
+margin-left: 0;
+}
+
+.k-head-card-content .mdui-card-header-avatar{
+margin-right: 12px;
+}
+
+.mdui-card-media img.k-head-card-img{
+width: 64px;
+margin: 0 auto;
+}
+</style>
+<div class="k-posts-list"></div>
+<div class="mdui-container">
+<div class="head_card-offset"></div>
+ <div class="mdui-row"> <div class="mdui-col-sm">
+   <div class="mdui-card k-list-card mdui-shadow-1 ">
+   <div class="mdui-card-media k-head-card-media" style="background-image:url('https://raw.githubusercontent.com/linzx91/blog_material/master/imges/material_bg_1.png')">
+   <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+   <div class="mdui-card-primary">
+   </div>
+   </div>
+   </div>
+   <div class="mdui-divider"></div>
+     <div class="mdui-card-header k-head-card-content">
+     <div class="mdui-card-header-title">友情链接</div>
+     </div>
+   </div>
+</div>
+<br />
+    <div class="mdui-row-sm-2 mdui-row-md-4">
+        {% for f in site.data.friends %}
+        <div class="mdui-col">
+            <a class="k-friend" href="{{f.url}}" target="_blank">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="{{f.image}}" />
+                    <div class="mdui-card-header-title">{{f.name}}</div>
+                    <div class="mdui-card-header-subtitle">{{f.describe}}</div>
+                </div>
+            </div>
+            </a>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
