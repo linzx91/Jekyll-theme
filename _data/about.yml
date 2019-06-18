@@ -1,0 +1,12 @@
+header:
+    name: "Aligege"
+    favicon: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/meng_logo.png"
+    siteurl: "https://alinblog.com/"
+    introduction: "个人博客"
+
+photo:
+    photo: true
+    pictures:
+        - "https://i.loli.net/2019/06/18/5d08ce917671b69328.png"
+        - "https://i.loli.net/2019/06/18/5d08ce9409bfe55617.jpg"
+        - "https://i.loli.net/2019/06/18/5d08ce96489c194291.jpg"

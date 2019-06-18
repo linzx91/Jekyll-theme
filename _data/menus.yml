@@ -7,9 +7,9 @@
 - name: 标签
   url: /tags/
   icon: "&#xe893;"
-- name: 情侣
-  url: /love/
-  icon: "&#xe87d;"
+- name: 关于
+  url: /about/
+  icon: "&#xe853;"
   color: "red"
 - name: 友链
   url: /friends/
