@@ -98,4 +98,4 @@ head_card:
   left_img: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/material_bg_2.png"
   left_text: "『 · 很高兴能在这里与你分享我对技术和生活的思考。 』"
   right_img: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/meng_logo.png"
-  offset_level: 2
+  offset_level: 0
