@@ -4,7 +4,7 @@ title: "Jekyll 博客添加网易云音乐插件"
 date: 2019-06-17 17:15:00 +0800
 categories: Living
 tags: 网易云音乐 音乐插件 Jekyll插件
-img: https://raw.githubusercontent.com/linzx91/blog_material/master/imges/posts/cloud-music.jpg
+img: https://i.loli.net/2019/06/17/5d0759810376649408.jpg
 themecolor: "#fff"
 themetextcolor: "#000"
 describe: 

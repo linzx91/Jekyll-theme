@@ -1,7 +1,7 @@
 head: 
-   favicon: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/favicon.png" #  the favicon
-   high_res_favicon: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/high_res_favicon.png" #  the favicon using high quality format
-   apple_touch_icon: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/touch.png" # the iOS Home button icon
+   favicon: "https://i.loli.net/2019/06/19/5d093638e0bef35164.png" #  the favicon
+   high_res_favicon: "https://i.loli.net/2019/06/19/5d09363872a9732181.png" #  the favicon using high quality format
+   apple_touch_icon: "https://i.loli.net/2019/06/19/5d0936a05f0a615827.png" # the iOS Home button icon
    keywords: "个人博客" #  the site keywords
 
 uiux:
@@ -14,7 +14,7 @@ background:
    purecolor: "#eeeeee" # the background color
 
 img: 
-   avatar: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/avatar.jpg" # your avatar
+   avatar: "https://i.loli.net/2019/06/19/5d09357c3e77097123.jpg" # your avatar
 
 card: 
    card_shadow: 2 # card shadow (0-24), 0 is not displayed
