@@ -2,7 +2,7 @@ header:
     name: "Aligege"
     favicon: "https://raw.githubusercontent.com/linzx91/blog_material/master/imges/meng_logo.png"
     siteurl: "https://alinblog.com/"
-    introduction: "个人博客"
+    introduction: "『 · 后端小白一枚，但是出奇的喜欢倒腾前端的东西！热爱游戏、平时喜欢逛逛技术论坛。』"
 
 photo:
     photo: true
