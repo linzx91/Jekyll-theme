@@ -3,7 +3,7 @@
   icon: home
 - name: 分类
   url: /category/
-  icon: "&#xe53b;"
+  icon: "&#xe871;"
 - name: 标签
   url: /tags/
   icon: "&#xe893;"
