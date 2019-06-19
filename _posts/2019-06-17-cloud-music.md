@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Jekyll 博客添加网易云音乐插件"
+title: "在个人博客中添加网易云音乐"
 date: 2019-06-17 17:15:00 +0800
 categories: Living
-tags: 网易云音乐 音乐插件 Jekyll插件
+tags: jekyll 插件
 img: https://i.loli.net/2019/06/17/5d0759810376649408.jpg
 themecolor: "#fff"
 themetextcolor: "#000"
@@ -22,6 +22,7 @@ src="//music.163.com/outchain/player?type=2&id={{ page.music-id }}&auto=1&height
 </iframe>
 ```
 {% endraw %}
+
 
 将整个 `cloud-music.html` 嵌入 `post.html` 具体位置根据个人需求，具体代码如下：
 
@@ -49,7 +50,7 @@ music-id: 1355089626
 
 ---
 
-> 还有另外一种方法就是直接在 `_layouts/post.html` 文件中添加以下代码：
+> 另外还有一种方法就是直接在 `_layouts/post.html` 文件中添加以下代码：
 
 ```html{% raw %}
 {% if page.music-id %}
