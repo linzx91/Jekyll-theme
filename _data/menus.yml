@@ -1,15 +1,15 @@
 - name: 首页
   url: /
-  icon: home
+  icon: "&#xe88a;"
 - name: 分类
   url: /category/
-  icon: "&#xe871;"
+  icon: "&#xe53b;"
 - name: 标签
   url: /tags/
-  icon: "&#xe893;"
+  icon: "&#xe892;"
 - name: 关于
   url: /about/
-  icon: "&#xe853;"
+  icon: "&#xe88e;"
   color: "red"
 - name: 友链
   url: /friends/
