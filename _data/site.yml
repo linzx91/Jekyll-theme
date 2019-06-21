@@ -50,8 +50,8 @@ comment:
   #valine config
   valine_notify: false #mail notifier
   valine_verify: false #validation code
-  valine_app_id: '6svkaiDumVMLw1iWvuvyxu5a-gzGzoHsz'
-  valine_app_key: 'h5teVhNXe1GP1PpqsTSo1psF'
+  valine_app_id: 'LbNmV7xclW3Oox6EKv7RRaT7-9Nh9j0Va'
+  valine_app_key: 'iHpgXhiVmUvE8A8T2IpbD3ao'
   valine_placeholder: "✎ 写评论…"
 
 prism:
