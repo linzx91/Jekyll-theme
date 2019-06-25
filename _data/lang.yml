@@ -38,8 +38,8 @@ zh-CN:
       toQq: "分享到 QQ"
       toTelegram: "分享到 Telegram"
    error:
-      404x: "404 页面不存在！"
-      403x: "403 资源不可用！"
+      404x: "404 Not Found!"
+      403x: "403 Resource Not Available!"
 en-US:
    meng:
       head_card: 
@@ -80,5 +80,5 @@ en-US:
       toQq: "Share to QQ"
       toTelegram: "Share to Telegram"
    error:
-      404x: "404 Error Not Found!"
+      404x: "404 Not Found!"
       403x: "403 Resource Not Available!"
