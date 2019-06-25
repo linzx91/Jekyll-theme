@@ -80,15 +80,18 @@
                 {% include content/component/lastupdate.html %}
                 <div class="mdui-card-content mdui-typo">
                     {{ content }}
+                <div style="height:20px;"></div>
+                {% include component/license.html %}
                 </div>
-                {% include content/new_old.html %}
+                <div style="height:20px;"></div>
+                {% include component/new_old.html %}
                 {% include comment/comment.html %}
             </div>
         </div>
         <div class="mdui-col-md-3 mdui-hidden-sm-down">
-            {% include content/component/toc.html %}
+        {% include content/component/toc.html %}
         </div>
-    </div>
+      </div>
     <br>
 </div>
 {% include content/component/highlight.html %}
