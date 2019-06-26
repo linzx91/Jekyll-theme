@@ -38,6 +38,7 @@ zh-CN:
       toQq: "分享到 QQ"
       toTelegram: "分享到 Telegram"
    error:
+      title: "页面不存在"
       subtitle: "很抱歉，您要访问的页面不存在！"
       button: "返回首页"
 en-US:
@@ -80,5 +81,6 @@ en-US:
       toQq: "Share to QQ"
       toTelegram: "Share to Telegram"
    error:
+      title: "Page not found"
       subtitle: "Sorry, the page you requested does not exist."
       button: "Back"
