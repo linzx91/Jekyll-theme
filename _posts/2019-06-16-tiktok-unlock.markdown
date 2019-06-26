@@ -4,7 +4,7 @@ title: "TikTok 封区解锁"
 date: 2019-06-16 22:05:00 +0800
 categories: Ruleset
 tags: TikTok Surge Rule
-img: https://i.loli.net/2019/06/19/5d09357b4a54250719.jpg
+img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2019-06-16-tiktok-unlock.jpeg
 themecolor: "#fff"
 themetextcolor: "#000"
 describe: 

@@ -4,7 +4,7 @@ title: "再见 YY，你好 Discord"
 date: 2018-02-13 13:26:16 +0800
 categories: Living
 tags: discord game yy
-img: https://i.loli.net/2018/02/13/5a8299ad7dff9.png
+img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2018-02-13-goodbey-yy-fuck-yy.png
 describe: 为什么要使用流氓 YY ？
 ---
 

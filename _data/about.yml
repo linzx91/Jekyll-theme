@@ -1,13 +1,13 @@
 header:
     name: "ALIGEGE"
-    favicon: "https://i.loli.net/2019/06/19/5d09357d1e1ee85278.png"
+    favicon: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/about_favicon.png"
     siteurl: "https://alinblog.com/"
     introduction: "『 · 后端小白一枚，但是出奇的喜欢倒腾前端的东西！热爱游戏、平时喜欢逛逛技术论坛。』"
 
 photo:
     photo: true
     pictures:
-        - "https://i.loli.net/2019/06/18/5d08d48bdeacd34324.jpg"
-        - "https://i.loli.net/2019/06/18/5d08ce917671b69328.png"
-        - "https://i.loli.net/2019/06/19/5d093905008d472162.jpg"
-        - "https://i.loli.net/2019/06/18/5d08ce96489c194291.jpg"
+        - "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/img_1.jpeg"
+        - "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/img_2.jpeg"
+        - "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/img_3.jpeg"
+        - "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/img_4.jpeg"
