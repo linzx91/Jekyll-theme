@@ -1,7 +1,3 @@
 aligege:
-  avatar: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/avatar.jpeg"
+  avatar: "/assets/images/avatar.png"
   name: "Aligege"
-
-test:
-  avatar: "https://dummyimage.com/40x40/ffffff/000000.png&text=Test"
-  name: "Test"
