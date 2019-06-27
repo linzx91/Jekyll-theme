@@ -1,7 +1,7 @@
 head: 
-   favicon: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/favicon.png" #  the favicon
-   high_res_favicon: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/favicon_hd.png" #  the favicon using high quality format
-   apple_touch_icon: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/touch_icon.png" # the iOS Home button icon
+   favicon: "http://lc-lbnmv7xc.cn-e1.lcfile.com/23524f44d0dbda8a8b8d/56F06ECF-CB2C-4EB6-B224-FA5239175167.png" #  the favicon
+   high_res_favicon: "http://lc-lbnmv7xc.cn-e1.lcfile.com/2dbf72e175302067d7aa/95E88963-A726-420D-96A8-419DBA32B02B.png" #  the favicon using high quality format
+   apple_touch_icon: "http://lc-lbnmv7xc.cn-e1.lcfile.com/e94db32f1ae4f5296ef5/05F6DD92-5FA1-4F48-9824-8EC26044BDB7.png" # the iOS Home button icon
    keywords: "个人博客" #  the site keywords
 
 uiux:
