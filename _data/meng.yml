@@ -48,7 +48,7 @@ animation: # animate.css, see https://github.com/daneden/animate.css
 #!!!!do not use!!!!
 
 music_player:
-  player: "aplayer" #cplayer or aplayer
+  player: "" #cplayer or aplayer
   button_color: "rgba(33, 33, 33, 0.8)"
   music:
     - title: '任我行'

@@ -1,0 +1,48 @@
+<style>
+.k-mdui-card{
+    padding-left: 16px!important;
+    padding-right: 16px!important;
+    padding-bottom: 16px!important;
+    background-color: rgba(255, 255, 255, 0.8)!important;
+}
+.title{
+	margin-top: 10px!important;
+	margin-bottom: 10px!important;
+	color: #616161!important;
+}
+.title-text{
+    padding-left: 12px!important;
+    size: 5px!important;
+}
+    li {margin: 0em 0;}
+    button {min-height: 0px;}
+    .aplayer {margin: 0 0 0em 0 !important;}
+</style>
+<div class="k-mdui-card mdui-card mdui-hoverable">
+<div class="title mdui-valign">
+<i class="mdui-icon material-icons">album</i>
+<div class="title-text mdui-typo-title-opacity">网易云歌单</div>
+</div>
+
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+	type="playlist"
+	id="21347411"
+	autoplay="false"
+	theme="#F44336"
+	loop="all"
+	order="list"
+	preload="auto"
+	volume="0.7"
+	mutex="true"
+	list-folded="false"
+	list-max-height="360px"
+	storage-name="metingjs">
+</meting-js>
+</div>
