@@ -6,16 +6,16 @@
         text-shadow: none
     }
     25% {
-        text-shadow: -2px -2px 0 #ff0048,2px 2px 0 #3234ff
+        text-shadow: -2px -2px 0 #ff1850,2px 2px 0 #23f5f1
     }
     50% {
-        text-shadow: 2px -2px 0 #ff0048,-2px 2px 0 #3234ff
+        text-shadow: 2px -2px 0 #ff1850,-2px 2px 0 #23f5f1
     }
     75% {
-        text-shadow: -2px 2px 0 #ff0048,2px -2px 0 #3234ff
+        text-shadow: -2px 2px 0 #ff1850,2px -2px 0 #23f5f1
     }
     100% {
-        text-shadow: 2px 2px 0 #ff0048,-2px -2px 0 #3234ff
+        text-shadow: 2px 2px 0 #ff1850,-2px -2px 0 #23f5f1
     }
 }
 @keyframes uk-flicker {
