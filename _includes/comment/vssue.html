@@ -1,25 +1,21 @@
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
-</head>
-<body>
-  <div id="vssue"></div>
-  <script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
-  <script>
-    new Vue({
-      el: '#vssue',
+<div id="vssue"></div>
+<script>
+usepath = location.pathname.replace('/Ruleset','');
+usepath = usepath.replace('/Living','');
+usepath = usepath.replace('/technology','');
+usepath = usepath.replace('.html','');
+new Vue({
+    el: '#vssue',
       render: h => h('Vssue', {
         props: {
-          title: 'Vssue Dev',
+          title: md5(usepath),
           options: {
-            owner: 'linzx91',
-            repo: 'linzx91.github.io',
-            clientId: '565c41844cd68e34afbb',
-            clientSecret: 'f27bacb2fb9e6e3b54d447be6db1eef54441d14e',
+            owner: '{{ site.data.site.comment.vssue_owner }}',
+            repo: '{{ site.data.site.comment.vssue_repo }}',
+            clientId: '{{ site.data.site.comment.vssue_clientId }}',
+            clientSecret: '{{ site.data.site.comment.vssue_clientSecret }}',
           },
         }
-      })
     })
-  </script>
-</body>
+})
+</script>

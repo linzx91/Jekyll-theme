@@ -32,7 +32,7 @@ sns_share: # SNS Share Switch
    telegram: true
   
 comment:
-  used: "disqus" # disqus,livere,gitment,valine,vssue
+  used: "vssue" # disqus,livere,gitment,valine,vssue
   # disqus config
   disqus_shortname: "aligegeblog" # Your disqus 
   disqus_button: true # disqus load button
@@ -53,6 +53,11 @@ comment:
   valine_app_id: 'LbNmV7xclW3Oox6EKv7RRaT7-9Nh9j0Va'
   valine_app_key: 'iHpgXhiVmUvE8A8T2IpbD3ao'
   valine_placeholder: "✎ 写评论…"
+  #Vssue
+  vssue_owner: "linzx91"
+  vssue_repo: "linzx91.github.io"
+  vssue_clientId: "565c41844cd68e34afbb"
+  vssue_clientSecret: "f27bacb2fb9e6e3b54d447be6db1eef54441d14e"
 
 prism:
   themes: prism-okaidia
