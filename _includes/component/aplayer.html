@@ -1,33 +1,36 @@
 <style>
 .k-mdui-card{
-    padding-left: 16px!important;
-    padding-right: 16px!important;
-    padding-bottom: 16px!important;
-    background-color: rgba(255, 255, 255, 0.8)!important;
+    background-color: rgba(225, 225, 225, 0.8);
 }
-.title{
-	margin-top: 16px!important;
-	margin-bottom: 16px!important;
-	color: #424242!important;
+.k-card-toolbar{
+    background: rgba(48, 48, 51, 0.8);
 }
-.title-text{
-    padding-left: 8px!important;
+.aplayer{
+    background: rgba(255, 255, 255, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    box-shadow: none;
+    border-radius: 0px;
+    overflow: hidden;
+    user-select: none;
+    line-height: initial;
+    position: relative;
 }
-    li {margin: 0em 0;}
-    button {min-height: 0px;}
-    .aplayer {margin: 0 0 0em 0 !important;}
 </style>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <div class="k-mdui-card mdui-card mdui-hoverable">
-<div class="title mdui-valign">
-<i class="mdui-icon material-icons">album</i>
-<div class="title-text mdui-typo-subheading">网易云歌单</div>
+<div class="k-card-toolbar mdui-toolbar">
+  <span class="mdui-typo-title mdui-text-color-grey-200">网易云歌单</span>
+    <div class="mdui-toolbar-spacer"></div>
+  <a href="http://music.163.com/playlist/21347411/30486864/?userid=30486864" class="mdui-btn mdui-btn-icon" target="_blank"><i class="mdui-icon material-icons mdui-text-color-red" mdui-tooltip="{content: '<center>我喜欢的音乐</center>'}">favorite_border</i></a>
 </div>
 <meting-js
 	server="netease"
 	type="playlist"
 	id="21347411"
 	autoplay="false"
-	theme="#e91e63"
+	theme="#f44336"
 	loop="all"
 	order="list"
 	preload="auto"

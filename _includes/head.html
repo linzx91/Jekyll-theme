@@ -16,7 +16,6 @@
     {% if site.data.meng.animation.switch == true %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/doudong.css" />
     {% endif %}
     <link rel="shortcut icon" href="{{ site.data.site.head.favicon }}">
     <link rel="icon" sizes="192x192" href="{{ site.data.site.head.high_res_favicon }}">
@@ -89,16 +88,12 @@ var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElemen
 </script>
 <script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 {% endif %}
+
+    <!-- require CustomCss -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/doudong.css" />
     <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     <!-- require Vssue -->
-    <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
-    <script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
-    <!-- require BlueimpMD5 -->
-    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.min.css">
+
 </head>
