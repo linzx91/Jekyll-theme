@@ -1,8 +1,13 @@
 <style>
-.k-mdui-card{
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+.k-mdui-card {
     background-color: rgba(255, 255, 255, 0.8);
+}
+@supports (-webkit-backdrop-filter: brightness(100%) blur(15px)) or (backdrop-filter: brightness(100%) blur(15px)){
+.k-mdui-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: brightness(100%) blur(15px);
+    backdrop-filter: brightness(100%) blur(15px);
+    }
 }
 .k-head-card-media{
     max-height: 245px;
