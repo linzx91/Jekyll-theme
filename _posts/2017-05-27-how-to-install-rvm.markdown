@@ -4,7 +4,7 @@ title:  "如何安装 RVM 和 Ruby？"
 date:   2017-05-27 14:19:06 +0800
 categories: technology
 tags: ruby rvm
-img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2017-05-27-how-to-install-rvm.jpeg
+img: https://aligege-1259468288.file.myqcloud.com/img/2017-05-27-how-to-install-rvm.jpg
 ---
 
 Ruby Version Manager (RVM)，一个命令行工具。顾名思义，RVM可以方便的安装`gem`和`ruby`，这对想要安装 `Jekyll` 的萌新（我），简直不要太酸爽。

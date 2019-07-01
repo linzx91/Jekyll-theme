@@ -4,7 +4,7 @@ title:  "Ubuntu安装Apache，MySQL，PHP以及phpMyAdmin"
 date:   2016-04-14 10:24:49 +0800
 categories: technology
 tags: ubuntu apache mysql php phpmyadmin
-img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2016-04-14-ubuntu-installs-apache-masql-php-and-phpmyadmin.jpeg
+img: https://aligege-1259468288.file.myqcloud.com/img/2016-04-14-ubuntu-installs-apache-masql-php-and-phpmyadmin.jpg
 author: test
 describe: 还原了服务器，于是重装，顺路记录下来，路过的朋友们可以借鉴，LAMP Go!
 ---

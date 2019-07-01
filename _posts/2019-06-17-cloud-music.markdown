@@ -4,7 +4,7 @@ title: "在个人博客中添加网易云音乐"
 date: 2019-06-17 17:15:00 +0800
 categories: Living
 tags: jekyll 插件
-img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2019-06-17-cloud-music.jpeg
+img: https://aligege-1259468288.file.myqcloud.com/img/2019-06-17-cloud-music.jpg
 themecolor: "#fff"
 themetextcolor: "#000"
 describe: 

@@ -4,7 +4,7 @@ title:  "使用 abd + fastboot 救我的 Nexus5x"
 date:   2016-10-27 16:23:06 +0800
 categories: Living
 tags: android adb fastboot
-img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2017-05-27-use-adb-and-fastboot-to-save-my-nexus5x.jpeg
+img: https://aligege-1259468288.file.myqcloud.com/img/2017-05-27-use-adb-and-fastboot-to-save-my-nexus5x.jpg
 ---
 
 安卓就是要折腾。

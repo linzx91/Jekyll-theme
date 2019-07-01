@@ -4,7 +4,7 @@ title:  "Jekyll Theme MDUI"
 date:   2017-5-29 12:22:06 +0800
 categories: Living
 tags: jekyll theme liquid
-img: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_2017-05-29-jekyll-theme-mdui.jpeg
+img: https://aligege-1259468288.file.myqcloud.com/img/2017-05-29-jekyll-theme-mdui.jpg
 ---
 A Jekyll theme based on MDUI.
 

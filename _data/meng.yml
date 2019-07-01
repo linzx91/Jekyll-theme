@@ -90,7 +90,7 @@ music_player:
 
 head_card:
   switch: true
-  left_img: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/bg_a.png"
+  left_img: "https://aligege-1259468288.file.myqcloud.com/img/bg-a.png"
   left_text: "『 · 很高兴能在这里与你分享我对技术和生活的思考。 』"
-  right_img: "https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/t_avatar.png"
+  right_img: "https://aligege-1259468288.file.myqcloud.com/img/favicon-t.png"
   offset_level: 0

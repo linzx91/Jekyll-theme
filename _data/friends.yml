@@ -1,9 +1,9 @@
 - name: KeJun
-  image: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/kejun_favicon.png
+  image: https://aligege-1259468288.file.myqcloud.com/img/kejun-favicon.png
   url: https://kejun.me
   describe: 二次元智障
 
 - name: MDUI
-  image: https://images-1259468288.cos.ap-guangzhou.myqcloud.com/img/mdui_favicon.jpeg
+  image: https://aligege-1259468288.file.myqcloud.com/img/mdui-favicon.jpg
   url: https://www.mdui.org/
   describe: 一套用于开发 Material Design 网页的前端框架
