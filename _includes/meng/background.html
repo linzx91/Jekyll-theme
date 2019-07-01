@@ -13,6 +13,8 @@
 {% if site.data.meng.background.transparent_header == true %}
 <style>
 header{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     background-color:rgba(255, 255, 255, 0.8);
     color: {{site.data.meng.background.text_color}};
 }
@@ -23,6 +25,8 @@ header{
 <style>
 footer .mdui-card{
     color: {{site.data.meng.background.text_color}};
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     background-color:rgba(255, 255, 255, 0.8);
 }
 </style>
