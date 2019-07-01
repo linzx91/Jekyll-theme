@@ -55,6 +55,8 @@ h1.mdui-card-primary-title{
 }
 
 body,header{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     background-color:{{site.data.site.background.purecolor}};
 }
 ::-webkit-scrollbar {
