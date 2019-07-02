@@ -54,10 +54,15 @@ h1.mdui-card-primary-title{
     border-top: 1px solid rgba(0,0,0,.12);
 }
 
-body,header{
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+body,header {
     background-color:{{site.data.site.background.purecolor}};
+}
+@supports (-webkit-backdrop-filter: brightness(100%) blur(15px)) or (backdrop-filter: brightness(100%) blur(15px)){
+body,header {
+    background-color: {{site.data.site.background.purecolor}};
+    -webkit-backdrop-filter: brightness(100%) blur(15px);
+    backdrop-filter: brightness(100%) blur(15px);
+    }
 }
 ::-webkit-scrollbar {
     width: 10px;
