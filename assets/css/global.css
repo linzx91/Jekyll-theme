@@ -55,14 +55,7 @@ h1.mdui-card-primary-title{
 }
 
 body,header {
-    background-color:{{site.data.site.background.purecolor}};
-}
-@supports (-webkit-backdrop-filter: brightness(100%) blur(15px)) or (backdrop-filter: brightness(100%) blur(15px)){
-body,header {
     background-color: {{site.data.site.background.purecolor}};
-    -webkit-backdrop-filter: brightness(100%) blur(15px);
-    backdrop-filter: brightness(100%) blur(15px);
-    }
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -113,8 +106,8 @@ body,header {
     }
 }
 .k-footer-icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

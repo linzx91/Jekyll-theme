@@ -11,7 +11,7 @@ uiux:
    meng: true # meng
 
 background: 
-   purecolor: "rgba(239, 238, 243, 0.8)" # the background color
+   purecolor: "#efeef3" # the background color
 
 img: 
    avatar: "/assets/images/avatar.png" # your avatar

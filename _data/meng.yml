@@ -21,7 +21,7 @@ header: # Meng header color + theme-color
   switch: false
 
 background: # Meng background
-  switch: false
+  switch: true
   transparent_header: true
   transparent_footer: true
   text_color: '#000'
