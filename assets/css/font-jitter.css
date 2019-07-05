@@ -1,4 +1,4 @@
-.doudong{
+.font-jitter {
     animation: uk-text-shadow-glitch .65s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
 	}
 @keyframes uk-text-shadow-glitch {
