@@ -2,29 +2,32 @@
 .vssue .vssue-button{color:#FF4081;border:2px solid #FF4081;}.vssue .vssue-button:not(:disabled).vssue-button-primary{color:#FF4081;border-color:#FF4081;}.vssue .vssue-icon{fill:#FF4081;}.vssue .vssue-notice .vssue-alert{position:absolute;z-index:101;cursor:pointer;top:0;padding:10px 20px;width:100%;color:#FF4081;border:solid 2px #F8BBD0;border-radius:5px;background-color:rgba(239,238,243,0.8);}.vssue .vssue-notice .vssue-progress{background-color:#FF4081;}.vssue .vssue-status{color:#FF4081;}.vssue .vssue-comments .vssue-comment .vssue-comment-footer .vssue-comment-reactions .vssue-comment-reaction{color:#FF4081;}.vssue .vssue-comments .vssue-comment .vssue-comment-footer .vssue-comment-operations{color:#FF4081;}.vssue .vssue-pagination .vssue-pagination-link:not(.disabled){color:#FF4081;}.vssue:not(.vssue-comment-content) a{color:#FF4081;}.vssue .vssue-new-comment .vssue-new-comment-input:focus{background-color:rgba(239,238,243,0.8);border-color:#FF80AB;-webkit-box-shadow:0 0 1px 1px #FF80AB;box-shadow:0 0 1px 1px #FF80AB;}.vssue .vssue-comments .vssue-comment.vssue-comment-edit-mode .vssue-comment-main{border-color:#FF80AB;-webkit-box-shadow:0 0 1px 1px #FF80AB;box-shadow:0 0 1px 1px #FF80AB;}.vssue .vssue-pagination .vssue-pagination-select{border:1px solid #FF80AB;}.vssue .vssue-pagination .vssue-pagination-select:focus{-webkit-box-shadow:0 0 0.2px 0.2px #FF80AB;box-shadow:0 0 0.2px 0.2px #FF80AB;}.vssue .vssue-new-comment .vssue-new-comment-input{background-color:rgba(239,238,243,0.8);border:1px solid #eaecef;border-radius:5px;}
 </style>
 <div class="mdui-typo">
-<div id="vssue"></div>
-    <!-- Vssue Github build -->
-    <script src="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.github.min.js"></script>
-    <!-- require BlueimpMD5 -->
-    <script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script>
-<script>
-usepath = location.pathname.replace('/Ruleset','');
-usepath = usepath.replace('/Living','');
-usepath = usepath.replace('/technology','');
-usepath = usepath.replace('.html','');
+	<div id="vssue">
+	</div>
+	<!-- Vssue Github build -->
+	<script src="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.github.min.js">
+	</script>
+	<!-- require BlueimpMD5 -->
+	<script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js">
+	</script>
+	<script>
+		usepath = location.pathname.replace('/Ruleset', '');
+usepath = usepath.replace('/Living', '');
+usepath = usepath.replace('/technology', '');
+usepath = usepath.replace('.html', '');
 new Vue({
     el: '#vssue',
-      render: h => h('Vssue', {
+    render: h => h('Vssue', {
         props: {
-          title: md5(usepath),
-          options: {
-            owner: '{{ site.data.site.comment.vssue_owner }}',
-            repo: '{{ site.data.site.comment.vssue_repo }}',
-            clientId: '{{ site.data.site.comment.vssue_clientId }}',
-            clientSecret: '{{ site.data.site.comment.vssue_clientSecret }}',
-          },
+            title: md5(usepath),
+            options: {
+                owner: '{{ site.data.site.comment.vssue_owner }}',
+                repo: '{{ site.data.site.comment.vssue_repo }}',
+                clientId: '{{ site.data.site.comment.vssue_clientId }}',
+                clientSecret: '{{ site.data.site.comment.vssue_clientSecret }}',
+            },
         }
     })
 })
-</script>
+	</script>
 </div>

@@ -2,7 +2,7 @@
 .k-friend {
     text-decoration: none;
 }
-.k-head-card-media{
+.k-head-card-media {
     display:block
     cursor: pointer;
     max-height: 245px;
@@ -12,35 +12,42 @@
     background-color: white;
 }
 </style>
-<div class="k-posts-list"></div>
+<div class="k-posts-list">
+</div>
 <div class="mdui-container">
-<div class="mdui-card mdui-hoverable">
-  <div class="mdui-card-media k-head-card-media" style="background-image:url('https://aligege-1259468288.file.myqcloud.com/img/bg-friend.jpg')">
-  <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-      <div class="mdui-card-primary">
-        <div class="mdui-card-primary-title">友情链接
-              </div>
-          </div>
-      </div>
-  </div>
-<div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」
-          </div>
-      </div>
-  </br>
-    <div class="mdui-row-sm-2 mdui-row-md-4">
-        {% for f in site.data.friends %}
-        <div class="mdui-col">
-            <a class="k-friend" href="{{f.url}}" target="_blank">
-            <div class="mdui-card mdui-hoverable">
-                <div class="mdui-card-header">
-                    <img class="mdui-card-header-avatar" src="{{f.image}}" />
-                    <div class="mdui-card-header-title">{{f.name}}</div>
-                    <div class="mdui-card-header-subtitle">{{f.describe}}</div>
-                </div>
-            </div>
-            </a>
-            <br>
-        </div>
-        {% endfor %}
-    </div>
+	<div class="mdui-card mdui-hoverable">
+		<div class="mdui-card-media k-head-card-media" style="background-image:url('{{site.data.friends.head_card.img_url}}')">
+			<div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+				<div class="mdui-card-primary">
+					<div class="mdui-card-primary-title">
+						{{site.data.friends.head_card.title}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mdui-card-content">
+			{{site.data.friends.head_card.content}}
+		</div>
+	</div>
+	</br>
+	<div class="mdui-row-sm-2 mdui-row-md-4">
+		{% for f in site.data.friends.links %}
+		<div class="mdui-col">
+			<a class="k-friend" href="{{f.url}}" target="_blank">
+				<div class="mdui-card mdui-hoverable">
+					<div class="mdui-card-header">
+						<img class="mdui-card-header-avatar" src="{{f.image}}" />
+						<div class="mdui-card-header-title">
+							{{f.name}}
+						</div>
+						<div class="mdui-card-header-subtitle">
+							{{f.describe}}
+						</div>
+					</div>
+				</div>
+			</a>
+			<br>
+		</div>
+		{% endfor %}
+	</div>
 </div>
