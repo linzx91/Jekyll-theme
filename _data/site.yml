@@ -1,7 +1,7 @@
 head: 
-   favicon: "/assets/images/favicon.png" #  the favicon
-   high_res_favicon: "/assets/images/favicon_hd.png" #  the favicon using high quality format
-   apple_touch_icon: "/assets/images/touch/apple-touch-icon.png" # the iOS Home button icon
+   favicon: "/assets/images/favicon.ico" #  the favicon
+   high_res_favicon: "/assets/images/favicon_hd.ico" #  the favicon using high quality format
+   apple_touch_icon: "/assets/images/touch/icon-1024x1024.jpeg" # the iOS Home button icon
    keywords: "个人博客" #  the site keywords
 
 uiux:
