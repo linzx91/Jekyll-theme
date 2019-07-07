@@ -3,6 +3,15 @@
 {% else %}
 {% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
+<style>
+.valine-comment-box {
+	margin-top: 32px;
+}
+.v .vwrap .vheader .vinput:focus {
+	border-bottom-color:#ff4081;
+}
+</style>
+<div class="valine-comment-box">
 <script>
     $(function () {
         if($('script[src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"]').length === 0){
@@ -22,7 +31,7 @@
         } 
     })
 </script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
 <div style="padding:0px 16px;" class="comment"></div>
 <script>
 setTimeout(function(){
@@ -36,3 +45,4 @@ setTimeout(function(){
 });
 },1000)
 </script>
+</div>
