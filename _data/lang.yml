@@ -41,6 +41,9 @@ zh-CN:
       title: "页面不存在"
       subtitle: "很抱歉，您要访问的页面不存在！"
       button: "返回首页"
+   post_buttons:
+      new: "下一篇"
+      old: "上一篇"
 en-US:
    meng:
       head_card: 
@@ -84,3 +87,6 @@ en-US:
       title: "Page not found"
       subtitle: "Sorry, the page you requested does not exist."
       button: "Back"
+   post_buttons:
+      new: "Next Post"
+      old: "Previous Post"

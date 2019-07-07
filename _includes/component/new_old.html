@@ -1,7 +1,17 @@
+{% if site.data.site.lang == null or site.data.site.lang == "" %}
+{% assign lang = site.data.lang.en-US %}
+{% else %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% endif %}
+<style>
+.new-old-buttons {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+</style>
 <div class="mdui-divider">
 </div>
-<br>
-<div class="mdui-container">
+<div class="mdui-container new-old-buttons">
 	<div class="mdui-clearfix">
 		{% if page.previous.url %}
 		<div class="mdui-col mdui-float-left">
@@ -11,7 +21,7 @@
 					<i class="mdui-icon mdui-icon-left material-icons">
 						arrow_back
 					</i>
-					上一篇
+					{{lang.post_buttons.old}}
 				</button>
 			</a>
 		</div>
@@ -21,7 +31,7 @@
 				<i class="mdui-icon mdui-icon-left material-icons">
 					arrow_back
 				</i>
-				上一篇
+				{{lang.post_buttons.old}}
 			</button>
 		</div>
 		{% endif %}
@@ -33,7 +43,7 @@
 					<i class="mdui-icon mdui-icon-right material-icons">
 						arrow_forward
 					</i>
-					下一篇
+					{{lang.post_buttons.new}}
 				</button>
 			</a>
 		</div>
@@ -43,12 +53,11 @@
 				<i class="mdui-icon mdui-icon-right material-icons">
 					arrow_forward
 				</i>
-				下一篇
+				{{lang.post_buttons.new}}
 			</button>
 		</div>
 		{% endif %}
 	</div>
 </div>
-</br>
 <div class="mdui-divider">
 </div>
