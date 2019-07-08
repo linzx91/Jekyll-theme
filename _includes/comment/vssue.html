@@ -4,6 +4,11 @@
 <div class="mdui-typo">
 	<div id="vssue">
 	</div>
+	<!-- style sheet of Vssue -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.min.css">
+	<!-- Introduce Vue first -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js">
+	</script>
 	<!-- Vssue Github build -->
 	<script src="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.github.min.js">
 	</script>
@@ -12,22 +17,22 @@
 	</script>
 	<script>
 		usepath = location.pathname.replace('/Ruleset', '');
-usepath = usepath.replace('/Living', '');
-usepath = usepath.replace('/technology', '');
-usepath = usepath.replace('.html', '');
-new Vue({
-    el: '#vssue',
-    render: h => h('Vssue', {
-        props: {
-            title: md5(usepath),
-            options: {
-                owner: '{{ site.data.site.comment.vssue_owner }}',
-                repo: '{{ site.data.site.comment.vssue_repo }}',
-                clientId: '{{ site.data.site.comment.vssue_clientId }}',
-                clientSecret: '{{ site.data.site.comment.vssue_clientSecret }}',
-            },
-        }
-    })
-})
+		usepath = usepath.replace('/Living', '');
+		usepath = usepath.replace('/technology', '');
+		usepath = usepath.replace('.html', '');
+		new Vue({
+			el: '#vssue',
+			render: h = >h('Vssue', {
+				props: {
+					title: md5(usepath),
+					options: {
+						owner: '{{ site.data.site.comment.vssue_owner }}',
+						repo: '{{ site.data.site.comment.vssue_repo }}',
+						clientId: '{{ site.data.site.comment.vssue_clientId }}',
+						clientSecret: '{{ site.data.site.comment.vssue_clientSecret }}',
+					},
+				}
+			})
+		})
 	</script>
 </div>
