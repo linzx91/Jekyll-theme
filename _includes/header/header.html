@@ -19,6 +19,16 @@
     width: 268px;
     z-index: 9999;
 }
+.drawer-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+@supports (-webkit-backdrop-filter: brightness(150%) blur(32px)) or (backdrop-filter: brightness(150%) blur(32px)){
+.drawer-menu {
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: brightness(150%) blur(32px);
+    backdrop-filter: brightness(150%) blur(32px);
+    }
+}
 .k-navsearch-btn {
     position: relative;
     display: inline-block;
@@ -95,7 +105,7 @@
         </div>
     </div>
 </header>
-<div class="mdui-drawer mdui-drawer-close" id="k-menu">
+<div class="mdui-drawer mdui-drawer-close drawer-menu" id="k-menu">
     {% if navSearch == true %}
     <div class="mdui-textfield">
         <div class="typeahead__container">

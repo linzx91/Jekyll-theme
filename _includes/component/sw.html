@@ -1,6 +1,6 @@
 <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
+        navigator.serviceWorker.unregister("{{ "/sw.js" | relative_url }}").then(function() {
             console.log("Service Worker Registered");
         });
     }
