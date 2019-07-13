@@ -32,22 +32,14 @@ sns_share: # SNS Share Switch
    telegram: true
   
 comment:
-  used: "disqus" # disqus,livere,gitment,valine
+  used: "disqus" # disqus,valine
   # disqus config
   disqus_shortname: "aligegeblog" # Your disqus 
   disqus_button: true # disqus load button
   disqus_proxy: false # # disqus proxy(Do not use)
   disqus_proxy_url: "" # (Do not use)
   disqus_api_key: "" # (Do not use)
-  # livere config
-  livere_type: 'city'
-  livere_data_uid: ''
-  # gitment config
-  owner: ""
-  repo: ""
-  client_id: ""
-  client_secret: ""
-  #valine config
+  # valine config
   valine_notify: false #mail notifier
   valine_verify: false #validation code
   valine_app_id: 'LbNmV7xclW3Oox6EKv7RRaT7-9Nh9j0Va'
