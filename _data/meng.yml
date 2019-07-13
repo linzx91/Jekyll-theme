@@ -13,7 +13,7 @@ cursor: # Meng cursor
 console: # Meng console info
   switch: false # Meng console info switch
   theme_info: true # output theme info
-  text: "&copy; 2019 ALIGEGE BLOG" # text
+  text: "Copyright &copy; 2019 Alin's Site" # text
   color: "#fff" # text color
   background: "#448aff" # background color
 

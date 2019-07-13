@@ -2,7 +2,7 @@ head:
    favicon: "/assets/images/favicon.ico" #  the favicon
    high_res_favicon: "/assets/images/favicon_hd.ico" #  the favicon using high quality format
    apple_touch_icon: "/assets/images/touch/icon-1024x1024.jpeg" # the iOS Home button icon
-   keywords: "个人博客" #  the site keywords
+   keywords: "个人站点" #  the site keywords
 
 uiux:
    android_chrome_color: "rgba(238, 238, 238, 0.9)" #  the color of the Chrome address bar
@@ -32,7 +32,7 @@ sns_share: # SNS Share Switch
    telegram: true
   
 comment:
-  used: "disqus" # disqus,livere,gitment,valine,vssue
+  used: "disqus" # disqus,livere,gitment,valine
   # disqus config
   disqus_shortname: "aligegeblog" # Your disqus 
   disqus_button: true # disqus load button
@@ -53,24 +53,19 @@ comment:
   valine_app_id: 'LbNmV7xclW3Oox6EKv7RRaT7-9Nh9j0Va'
   valine_app_key: 'iHpgXhiVmUvE8A8T2IpbD3ao'
   valine_placeholder: "✎ 写评论…"
-  #Vssue
-  vssue_owner: "linzx91"
-  vssue_repo: "linzx91.github.io"
-  vssue_clientId: "565c41844cd68e34afbb"
-  vssue_clientSecret: "f27bacb2fb9e6e3b54d447be6db1eef54441d14e"
 
 prism:
-  themes: prism-okaidia
-  components: 
-    - bash 
-  plugins: 
+  components:
+    - bash
+    - markdown
+    - yaml
 
 mathjax: true
 
-google_analytics: "UA-142139913-1"  # google analytics code
+google_analytics: "UA-143551483-1"  # google analytics code
 
 baidu_site_verification: ""  # baidu site verification code
-google_site_verification: "XUXuiWEysvTUtgmy7rMLr3id1e0wP1GW1jR1FauzppU"  # google search console verification code
+google_site_verification: "KolyEBhRcdT0UlZMJyKut5HAL7olh_3lKreSBfT6VUE"  # google search console verification code
 
 baidu_auto_push: true  # if you used baidu auto push to commit links
 
