@@ -26,7 +26,7 @@ src="//music.163.com/outchain/player?type=2&id={{ page.music-id }}&auto=1&height
 
 将整个 `cloud-music.html` 嵌入 `post.html` 具体位置根据个人需求，具体代码如下：
 
-```html{% raw %}
+```liquid{% raw %}
 <!-- cloud music -->
 {% if page.music-id %}
 {% include cloud-music.html %}
@@ -36,7 +36,7 @@ src="//music.163.com/outchain/player?type=2&id={{ page.music-id }}&auto=1&height
 
 然后在需要添加音乐的文章开头的配置项添加`music-id: // 网易云音乐的歌曲id` 如下所示：
 
-```
+```yml
 ---
 music-id: 1355089626
 ---
