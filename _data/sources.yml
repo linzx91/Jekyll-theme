@@ -1,0 +1,5 @@
+css:
+  - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+
+js:
+  - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
