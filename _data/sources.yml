@@ -3,3 +3,4 @@ css:
 
 js:
   - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+  - //cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
