@@ -1,4 +1,4 @@
-{% assign aplayer = site.data.meng.music_player %}
+{% assign meting = site.data.meng.music_player %}
 <style>
 @media screen and (max-width:600px) {
 	.k-music-card {
@@ -43,18 +43,19 @@
 	float:right;
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
 <div class="k-music-card">
 <meting-js
-	server="{{aplayer.server}}"
-	type="{{aplayer.type}}"
-	id="{{aplayer.id}}"
-	autoplay="{{aplayer.autoplay}}"
-	theme="{{aplayer.theme}}"
-	loop="{{aplayer.loop}}"
-	order="{{aplayer.order}}"
-	preload="{{aplayer.preload}}"
-	volume="{{aplayer.volume}}"
-	mutex="{{aplayer.mutex}}"
+	server="{{meting.server}}"
+	type="{{meting.type}}"
+	id="{{meting.id}}"
+	autoplay="{{meting.autoplay}}"
+	theme="{{meting.theme}}"
+	loop="{{meting.loop}}"
+	order="{{meting.order}}"
+	preload="{{meting.preload}}"
+	volume="{{meting.volume}}"
+	mutex="{{meting.mutex}}"
 	list-folded="true"
 	list-max-height="296px"
 	storage-name="metingjs">
