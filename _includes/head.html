@@ -88,10 +88,10 @@ var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElemen
 </script>
 <script src="//cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
 {% endif %}
-{% for c in site.data.sources.css %}
-<link rel="stylesheet" href="{{ c }}">
+{% for css in site.data.sources.css %}
+<link rel="stylesheet" href="{{ css }}">
 {% endfor %}
-{% for j in site.data.sources.js %}
-<script type="text/javascript" src="{{ j }}"></script>
+{% for js in site.data.sources.js %}
+<script type="text/javascript" src="{{ js }}"></script>
 {% endfor %}
 </head>
