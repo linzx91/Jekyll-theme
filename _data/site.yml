@@ -48,7 +48,9 @@ comment:
 
 prism:
   components:
-    - vim
+    - php
+    - python
+    - ruby
 
 mathjax: true
 
