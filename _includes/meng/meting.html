@@ -6,25 +6,49 @@
 	}
 }
 .k-music-card {
-	width:320px;
-	box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
-	border-radius:0 8px 8px 0;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:flex-start;
 	position:fixed;
 	top:25%;
 	z-index:999;
-	transition:transform .5s ease;
+	transition:transform .5s ease
 }
 .aplayer {
 	background:#fff;
-	float:left;
 	width:300px;
 	margin:0 auto;
-	box-shadow:none;
+	box-shadow:0 1px 2px 0 rgba(0,0,0,.4),0 2px 5px 0 rgba(0,0,0,.2);
 	border-radius:0;
 	overflow:hidden;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
 	user-select:none;
 	line-height:initial;
+	position:relative
+}
+.aplayer.aplayer-withlist .aplayer-info {
+	box-shadow:0 1px 2px 0 rgba(0,0,0,.2),0 2px 5px 0 rgba(0,0,0,.1);
+	border-bottom:none
+}
+.aplayer.aplayer-withlrc .aplayer-pic {
+	height:90px;
+	width:90px;
+	box-shadow:0 1px 2px 0 rgba(0,0,0,.2),0 2px 5px 0 rgba(0,0,0,.1)
+}
+.aplayer .aplayer-list ol li {
 	position:relative;
+	height:32px;
+	line-height:32px;
+	padding:0 15px;
+	font-size:12px;
+	border-top:1px solid #e9e9e9;
+	cursor:pointer;
+	transition:all .2s ease;
+	overflow:hidden;
+	margin:0
 }
 .k-music-btn {
 	text-align:center;
@@ -32,28 +56,44 @@
 	color:#fff;
 	width:20px;
 	height:90px;
-	background:rgba(0,0,0,0.7) none repeat scroll 0% 0%;
-	border-radius:0 8px 8px 0;
+	background:{{meting.btn-color}} none repeat scroll 0% 0%;
 	position:relative;
-	right:0px;
-	bottom:0px;
+	overflow:hidden;
+	right:0;
+	bottom:0;
 	box-sizing:border-box;
 	border-left:none;
-	cursor:pointer;
-	overflow:hidden;
-	display:box-shadow:;
-	float:right;
-	user-select:none;
-	-ms-user-select:none;
-	-moz-user-select:none;
+	box-shadow:0 1px 2px 0 rgba(0,0,0,.4),0 2px 5px 0 rgba(0,0,0,.2);
+	display:inline;
 	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
 }
-@supports (-webkit-backdrop-filter:brightness(100%) blur(15px)) or (backdrop-filter:brightness(100%) blur(15px)) {
-	.k-music-btn {
-		background:rgba(0,0,0,0.7) none repeat scroll 0% 0%;
-		-webkit-backdrop-filter:brightness(100%) blur(15px);
-		backdrop-filter:brightness(100%) blur(15px);
-	}
+.k-music-btn:hover {
+	cursor:pointer;
+	filter:brightness(1.3) contrast(130%)
+}
+.k-music-btn:after {
+	content:"";
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	pointer-events:none;
+	background-image:radial-gradient(circle,#fff 10%,transparent 10.01%);
+	background-repeat:no-repeat;
+	background-position:50%;
+	transform:scale(10,10);
+	opacity:0;
+	transition:transform .3s,opacity .5s
+}
+.k-music-btn:active:after {
+	transform:scale(0,0);
+	opacity:.3;
+	transition:0s
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
@@ -76,6 +116,9 @@
 <div class="k-music-btn">‖</div>
 </div>
 <script>
+$(document).on('touchstart', function(e) {
+    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]
+});
 $(".aplayer-list").addClass("aplayer-list-hide");
 if ($(window).width() <= 600) {
     var flag = true;
