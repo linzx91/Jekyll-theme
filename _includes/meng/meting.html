@@ -116,33 +116,37 @@
 <div class="k-music-btn">‖</div>
 </div>
 <script>
-$(document).on('touchstart', function(e) {
-    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]
+$(document).on("touchstart", function(e) {
+  var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 });
 $(".aplayer-list").addClass("aplayer-list-hide");
 if ($(window).width() <= 600) {
-    var flag = true;
+  var flag = true;
 } else {
-    var flag = false;
+  var flag = false;
 }
-$('.k-music-btn').click(function() {
-    if (flag == false) {
-        $('.k-music-card').css('transform', 'translateX(-300px)');
-        flag = true;
-    } else if (flag == true) {
-        $('.k-music-card').css('transform', 'translateX(0px)');
-        flag = false;
-    }
-    if (!$(".aplayer-list").hasClass('aplayer-list-hide')) {
-        $(".aplayer-list").addClass('aplayer-list-hide');
-    }
+$(".k-music-btn").click(function() {
+  if (flag == false) {
+    $(".k-music-card").css("transform", "translateX(-300px)");
+    flag = true;
+  } else if (flag == true) {
+    $(".k-music-card").css("transform", "translateX(0px)");
+    flag = false;
+  }
+  if (!$(".aplayer-list").hasClass("aplayer-list-hide")) {
+    $(".aplayer-list").addClass("aplayer-list-hide");
+  }
 });
-document.addEventListener("visibilitychange", function() {
+document.addEventListener(
+  "visibilitychange",
+  function() {
     if (document.visibilityState == "hidden") {
-        ap.pause();
+      ap.pause();
     }
     if (document.visibilityState == "visible") {
-        ap.play();
+      ap.play();
     }
-}, false);
+  },
+  false
+);
 </script>
