@@ -1,23 +1,26 @@
 {% assign meting = site.data.meng.music_player %}
 <style>
-@media screen and (max-width:600px) {
-	.k-music-card {
-		transform:translateX(-300px)
-	}
-}
 .k-music-card {
-	display:flex;
-	flex-direction:row;
-	flex-wrap:nowrap;
-	justify-content:flex-start;
 	position:fixed;
 	top:25%;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-start;
 	z-index:999;
 	transition:transform .5s ease
 }
+@media screen and (max-width:600px) {
+	.k-music-card {
+		transform:translateX(calc(-100% + 20px))
+	}
+}
+@media screen and (max-width:300px) {
+	.k-music-card {
+		transform:translateX(-100%)
+	}
+}
 .aplayer {
 	background:#fff;
-	width:300px;
 	margin:0 auto;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.4),0 2px 5px 0 rgba(0,0,0,.2);
 	border-radius:0;
@@ -29,28 +32,35 @@
 	line-height:initial;
 	position:relative
 }
+@media screen and (min-width:480px) {
+	.aplayer {
+		width:360px
+	}
+}
+@media screen and (min-width:400px) and (max-width:479px) {
+	.aplayer {
+		width:320px
+	}
+}
+@media screen and (min-width:320px) and (max-width:399px) {
+	.aplayer {
+		width:280px
+	}
+}
+@media screen and (max-width:319px) {
+	.aplayer {
+		width:auto
+	}
+}
 .aplayer.aplayer-withlist .aplayer-info {
-	box-shadow:0 1px 2px 0 rgba(0,0,0,.2),0 2px 5px 0 rgba(0,0,0,.1);
 	border-bottom:none
 }
-.aplayer.aplayer-withlrc .aplayer-pic {
-	height:90px;
-	width:90px;
+.aplayer .aplayer-body {
+	position:relative;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2),0 2px 5px 0 rgba(0,0,0,.1)
 }
-.aplayer .aplayer-list ol li {
-	position:relative;
-	height:32px;
-	line-height:32px;
-	padding:0 15px;
-	font-size:12px;
-	border-top:1px solid #e9e9e9;
-	cursor:pointer;
-	transition:all .2s ease;
-	overflow:hidden;
-	margin:0
-}
 .k-music-btn {
+	flex:none;
 	text-align:center;
 	line-height:90px;
 	color:#fff;
@@ -72,7 +82,7 @@
 }
 .k-music-btn:hover {
 	cursor:pointer;
-	filter:brightness(1.3) contrast(130%)
+	filter:brightness(1.3) contrast(110%)
 }
 .k-music-btn:after {
 	content:"";
@@ -127,7 +137,7 @@ if ($(window).width() <= 600) {
 }
 $(".k-music-btn").click(function() {
   if (flag == false) {
-    $(".k-music-card").css("transform", "translateX(-300px)");
+    $(".k-music-card").css("transform", "translateX(calc(-100% + 20px))");
     flag = true;
   } else if (flag == true) {
     $(".k-music-card").css("transform", "translateX(0px)");
