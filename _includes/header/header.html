@@ -15,119 +15,146 @@
 {% endfor %}
 <style>
 .k-nav-search-card {
-    position: fixed;
-    width: 268px;
-    z-index: 9999;
+	position:fixed;
+	width:268px;
+	z-index:9999
 }
 .drawer-menu {
-    background-color: rgba(255, 255, 255, 0.8);
+	background-color:rgba(255,255,255,.8)
 }
-@supports (-webkit-backdrop-filter: brightness(150%) blur(32px)) or (backdrop-filter: brightness(150%) blur(32px)){
-.drawer-menu {
-    background-color: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: brightness(150%) blur(32px);
-    backdrop-filter: brightness(150%) blur(32px);
-    }
+@supports (-webkit-backdrop-filter:brightness(150%) blur(32px)) or (backdrop-filter:brightness(150%) blur(32px)) {
+	.drawer-menu {
+		background-color:rgba(255,255,255,.7);
+		-webkit-backdrop-filter:brightness(150%) blur(32px);
+		backdrop-filter:brightness(150%) blur(32px)
+	}
 }
 .k-navsearch-btn {
-    position: relative;
-    display: inline-block;
-    height: 36px;
-    box-sizing: border-box;
-    padding: 0 16px;
-    margin: 0;
-    overflow: hidden;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 36px;
-    color: inherit;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    zoom: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background: 0 0;
-    border: none;
-    border-radius: 2px;
-    outline: 0;
-    -webkit-transition: all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
-    transition: all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
-    will-change: box-shadow;
-    -webkit-user-drag: none;
+	position:relative;
+	display:inline-block;
+	height:36px;
+	box-sizing:border-box;
+	padding:0 16px;
+	margin:0;
+	overflow:hidden;
+	font-size:14px;
+	font-weight:500;
+	line-height:36px;
+	color:inherit;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:.04em;
+	white-space:nowrap;
+	vertical-align:middle;
+	-ms-touch-action:manipulation;
+	touch-action:manipulation;
+	cursor:pointer;
+	zoom:1;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	background:0 0;
+	border:none;
+	border-radius:2px;
+	outline:0;
+	-webkit-transition:all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
+	transition:all .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,1,1);
+	will-change:box-shadow;
+	-webkit-user-drag:none
 }
 .mdui-textfield-expandable.mdui-textfield-expanded {
-    width: 300px;
+	width:300px
 }
-.k-header-menus{
-    display: -webkit-inline-box;
-    display: inline-block;
+.k-header-menus {
+	display:-webkit-inline-box;
+	display:inline-block
 }
-.typeahead__group-group a{
-    width: 100%;
-    text-align: left;
+.typeahead__group-group a {
+	width:100%;
+	text-align:left
+}
+.mobile-menus-search {
+	margin:0 10px 0 10px
 }
 </style>
 <header mdui-headroom class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed">
-    <div class="mdui-toolbar">
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-drawer="{target: '#k-menu'}"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
-        <a href="{{ "/" | prepend: site.baseurl}}" class="mdui-typo-title">{{site.title |upcase }}</a>
-        <div class="mdui-toolbar-spacer"></div>
-        <div class="mdui-hidden-xs-down">
-            <div class="k-header-menus" id="k-menus">
-        {% for menu in site.data.menus %}
-        {% if menu.name != "navSearch" %}
-        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">{{menu.name}}</a>
-        {% endif %}
-        {% endfor %}
-        </div>
-        {% if navSearch == true %}
-        <div class="mdui-textfield k-navsearch-btn mdui-textfield-expandable">
-            <button class="mdui-textfield-icon k-navsearch-open mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
-            <div class="typeahead__container">
-                <div class="typeahead__field">
-                    <span class="typeahead__query">
-                        <input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
-                    </span>
-                </div>
-            </div>
-            <button class="mdui-textfield-close k-navsearch-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5cd;</i></button>
-        </div>
-        {% endif %}
-        </div>
-    </div>
+	<div class="mdui-toolbar">
+		<a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-hidden-sm-up"
+		mdui-drawer="{target: '#k-menu'}">
+			<i class="mdui-icon material-icons">
+				&#xe5d2;
+			</i>
+		</a>
+		<a href="{{ " / " | prepend: site.baseurl}}" class="mdui-typo-title">
+			{{site.title |upcase }}
+		</a>
+		<div class="mdui-toolbar-spacer">
+		</div>
+		<div class="mdui-hidden-xs-down">
+			<div class="k-header-menus" id="k-menus">
+				{% for menu in site.data.menus %}
+				{% if menu.name != "navSearch" %}
+				<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-btn mdui-ripple {% if menu.url  == page.url %}mdui-list-item-active{% endif %}">
+					{{menu.name}}
+				</a>
+				{% endif %}
+				{% endfor %}
+			</div>
+			{% if navSearch == true %}
+			<div class="mdui-textfield k-navsearch-btn mdui-textfield-expandable">
+				<button class="mdui-textfield-icon k-navsearch-open mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons">
+						&#xe8b6;
+					</i>
+				</button>
+				<div class="typeahead__container">
+					<div class="typeahead__field">
+						<span class="typeahead__query">
+							<input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
+						</span>
+					</div>
+				</div>
+				<button class="mdui-textfield-close k-navsearch-close mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons">
+						&#xe5cd;
+					</i>
+				</button>
+			</div>
+			{% endif %}
+		</div>
+	</div>
 </header>
 <div class="mdui-drawer mdui-drawer-close drawer-menu" id="k-menu">
-    {% if navSearch == true %}
-    <div class="mdui-textfield">
-        <div class="typeahead__container">
-            <div class="typeahead__field">
-                <span class="typeahead__query">
-                    <i class="mdui-icon material-icons">&#xe8b6;</i>
-                    <input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
-                </span>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-    <ul id="k-mobile-menus" class="mdui-list">
-        {% for menu in site.data.menus %}
-        {% if menu.name != "navSearch" %}
-        <a href="{{menu.url | prepend: site.baseurl }}" class="mdui-list-item mdui-ripple {% if menu.url == page.url %}mdui-list-item-active{% endif %}">
-            <i class="mdui-list-item-icon mdui-icon material-icons">{{menu.icon}}</i>
-            <div class="mdui-list-item-content">{{menu.name}}</div>
-        </a>
-        {% endif %}
-        {% endfor %}
-    </ul>
+	{% if navSearch == true %}
+	<div class="mdui-textfield mobile-menus-search">
+		<div class="typeahead__container">
+			<div class="typeahead__field">
+				<span class="typeahead__query">
+					<i class="mdui-icon material-icons">
+						&#xe8b6;
+					</i>
+					<input class="mdui-textfield-input k-nav-search" type="text" placeholder="{{lang.page.search}}"/>
+				</span>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	<ul id="k-mobile-menus" class="mdui-list">
+		{% for menu in site.data.menus %}
+		{% if menu.name != "navSearch" %}
+		<a href="{{menu.url | prepend: site.baseurl }}" class="mdui-list-item mdui-ripple {% if menu.url == page.url %}mdui-list-item-active{% endif %}">
+			<i class="mdui-list-item-icon mdui-icon material-icons">
+				{{menu.icon}}
+			</i>
+			<div class="mdui-list-item-content">
+				{{menu.name}}
+			</div>
+		</a>
+		{% endif %}
+		{% endfor %}
+	</ul>
 </div>
 {% if navSearch == true %}
 <script>

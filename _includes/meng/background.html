@@ -27,8 +27,8 @@ header {
     }
 }
 </style>
-
 {% endif %}
+
 {% if site.data.meng.background.transparent_footer == true %}
 <style>
 footer .mdui-card{
@@ -44,6 +44,8 @@ footer .mdui-card {
 }
 </style>
 {% endif %}
+
+{% if site.data.meng.background.animation == true %}
 <script>
 (function(name,factory){if(typeof window==="object"){window[name]=factory()}})("Ribbons",function(){var _w=window,_b=document.body,_d=document.documentElement;var random=function(){if(arguments.length===1){if(Array.isArray(arguments[0])){var index=Math.round(random(0,arguments[0].length-1));return arguments[0][index]}
 return random(0,arguments[0])}
@@ -70,3 +72,4 @@ if(numDone>=numSections){this._ribbons[a]=null}}
 if(this._ribbons.length<this._options.ribbonCount){this.addRibbon()}
 requestAnimationFrame(this._onDraw)},_onResize:function(e){var screen=screenInfo(e);this._width=screen.width;this._height=screen.height;if(this._canvas){this._canvas.width=this._width;this._canvas.height=this._height;if(this._context){this._context.globalAlpha=this._options.colorAlpha}}},_onScroll:function(e){var screen=screenInfo(e);this._scroll=screen.scrolly}};return Factory});new Ribbons({colorSaturation:"60%",colorBrightness:"50%",colorAlpha:0.5,colorCycleSpeed:5,verticalPosition:"random",horizontalSpeed:200,ribbonCount:3,strokeSize:0,parallaxAmount:-0.2,animateSections:!0})
 </script>
+{% endif %}
