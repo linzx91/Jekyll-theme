@@ -15,17 +15,17 @@
 <div class="k-posts-list">
 </div>
 <div class="mdui-container">
-	<div class="mdui-card mdui-hoverable animated flipInX">
+	<div class="animated fadeInDown mdui-card mdui-hoverable">
 		<div class="mdui-card-media k-head-card-media" style="background-image:url('{{site.data.friends.head_card.img_url}}')">
 			<div class="mdui-card-media-covered mdui-card-media-covered-gradient">
 				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">
+					<div class="animated zoomIn delay-1s mdui-card-primary-title">
 						{{site.data.friends.head_card.title}}
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="mdui-card-content">
+		<div class="animated zoomIn delay-1s mdui-card-content">
 			{{site.data.friends.head_card.content}}
 		</div>
 	</div>
@@ -34,13 +34,13 @@
 		{% for f in site.data.friends.links %}
 		<div class="mdui-col">
 			<a class="k-friend" href="{{f.url}}" target="_blank">
-				<div class="mdui-card mdui-hoverable animated flipInX">
+				<div class="animated fadeInUp mdui-card mdui-hoverable">
 					<div class="mdui-card-header">
-						<img class="mdui-card-header-avatar" src="{{f.image}}" />
-						<div class="mdui-card-header-title">
+						<img class="animated rotateIn delay-1s mdui-card-header-avatar" src="{{f.image}}" />
+						<div class="animated zoomIn delay-1s mdui-card-header-title">
 							{{f.name}}
 						</div>
-						<div class="mdui-card-header-subtitle">
+						<div class="animated zoomIn delay-1s mdui-card-header-subtitle">
 							{{f.describe}}
 						</div>
 					</div>
