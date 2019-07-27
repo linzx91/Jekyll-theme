@@ -31,7 +31,7 @@
     }
 </style>
 <div class="mdui-row">
-    <div class="mdui-col-sm-8">
+    <div class="mdui-col-sm-8 animated slideInLeft">
         <div class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
             <div class="mdui-card-media k-head-card-media" style="background-image:url('{{head_card.left_img}}')">
                 <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
@@ -47,10 +47,10 @@
             </div>
         </div>
     </div>
-    <div class="mdui-col-sm-4">
+    <div class="mdui-col-sm-4 animated slideInRight">
         <div style="overflow: visible;" class="mdui-card k-list-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
             <div class="mdui-card-media k-head-card-media mdui-valign">
-                <img class="k-head-card-img" src="{{head_card.right_img}}" alt="">
+                <img class="k-head-card-img animated zoomIn delay-1s" src="{{head_card.right_img}}" alt="">
             </div>
             <div class="mdui-divider"></div>
             <div class="mdui-card-header k-head-card-content">
