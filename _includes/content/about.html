@@ -71,7 +71,7 @@ a:active {
 		<div class="mdui-col-md-1 mdui-col-sm-1">
 		</div>
 		<div class="mdui-col-md-10 mdui-col-sm-10">
-			<div class="animated slideInDown mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+			<div class="animated slideInDown mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true %}mdui-hoverable{% endif %}">
 				<div class="mdui-card-primary-title title">
 					关于
 				</div>
@@ -79,7 +79,7 @@ a:active {
 					<hr/>
 				</div>
 				<a href="{{site.data.about.header.siteurl}}" target="_blank">
-					<img class="animated rotateIn delay-1s avatar mdui-center" src="{{site.data.about.header.favicon}}" />
+					<img class="animated rotateIn delay-1s avatar mdui-center" src="{{site.data.about.header.favicon}}"/>
 				</a>
 				<div class="mdui-card-primary">
 					<h1 class="animated zoomIn delay-1s padding-bottom-8px mdui-card-primary-title name mdui-text-center">
@@ -100,8 +100,8 @@ a:active {
 			</div>
 			</br>
 			</br>
-			{%if site.data.about.photo.photo==true%}
-			<div class="lazyload animated slideInUp mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true%}mdui-hoverable{% endif %}">
+			{% if site.data.about.photo.photo == true %}
+			<div class="animated slideInUp mdui-card mdui-shadow-{{site.data.site.card.card_shadow}} {% if site.data.site.card.card_hoverable == true %}mdui-hoverable{% endif %}">
 				<div class="mdui-card-primary-title title">
 					相册
 				</div>
@@ -109,21 +109,21 @@ a:active {
 					<hr/>
 				</div>
 				<div class="mdui-col-md-12 mdui-col-sm-12">
-					{%for picture in site.data.about.photo.pictures%}
+					{% for picture in site.data.about.photo.pictures %}
 					<div class="padding-bottom-16px mdui-col-md-4 mdui-col-sm-6">
-						<div class="mdui-card mdui-shadow-2 animated flipInX delay-1s">
+						<div class="animated flipInX delay-1s mdui-card mdui-shadow-2">
 							<div class="mdui-card-media k-post-media lazy" data-original="{{picture}}">
 							</div>
 						</div>
 					</div>
-					{%endfor%}
+					{% endfor %}
 					<div class="padding-bottom-8px">
 					</div>
 				</div>
 			</div>
-			{%else%}
-			{%endif%}
+			{% else %}
+			{% endif %}
 		</div>
 	</div>
-	{%include content/component/lazyload.html%}
+	{% include content/component/lazyload.html %}
 </body>
