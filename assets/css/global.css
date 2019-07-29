@@ -5,7 +5,7 @@ layout: null
     {% if site.data.site.uiux.meng == true %}
     {% if site.data.meng.head_card.switch == true %}
     .head_card-offset{
-        padding-top: 65px;
+        padding-top: 64px;
     }
     @media screen and (max-width: 600px){
         .head_card-offset{
@@ -83,11 +83,11 @@ body,header {
     flex-shrink: 0;
 }
 .k-posts-list {
-    padding-top: 65px;
+    padding-top: 64px;
 }
 @media screen and (max-width: 600px){
     .k-posts-list {
-        padding-top: 56px;
+        padding-top: 72px;
     }
         .mdui-container {
             width: 100%;
