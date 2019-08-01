@@ -14,9 +14,7 @@
 .license-card-header {
 	height:26px;
 	display:flex;
-	flex-flow:row nowrap;
-	justify-content:flex-start;
-	padding-left:12px;
+	align-items:center;
 	background:-webkit-linear-gradient(left top,#e5e5e5,#dcdcdc);
 	background:-o-linear-gradient(bottom right,#e5e5e5,#dcdcdc);
 	background:-moz-linear-gradient(bottom right,#e5e5e5,#dcdcdc);
@@ -25,40 +23,26 @@
 .license-card-header .red-button {
 	width: 10px;
 	height: 10px;
-	margin-top: 7px;
-	margin-right: 8px;
+	margin-left: 12px;
 	border-radius: 100%;
 	border:1px solid #e64344;
 	background-color: #ff5d5b;
 }
-.license-card-header .red-button:hover {
-	cursor:pointer;
-	filter:brightness(1.3) contrast(110%)
-}
 .license-card-header .yellow-button {
 	width: 10px;
 	height: 10px;
-	margin-top: 7px;
-	margin-right: 8px;
+	margin-left: 8px;
 	border-radius: 100%;
 	border:1px solid #e3a041;
 	background-color: #ffbc4c;
 }
-.license-card-header .yellow-button:hover {
-	cursor:pointer;
-	filter:brightness(1.3) contrast(110%)
-}
 .license-card-header .green-button {
 	width: 10px;
 	height: 10px;
-	margin-top: 7px;
+	margin-left: 8px;
 	border-radius: 100%;
 	border:1px solid #13ad46;
 	background-color: #00c956;
-}
-.license-card-header .green-button:hover {
-	cursor:pointer;
-	filter:brightness(1.3) contrast(110%)
 }
 .license-card-content {
 	color: #f1f1f1;
@@ -85,7 +69,7 @@
 	50% {opacity:1}
 	100% {opacity:0}
 }
-.logo {
+.license-logo {
 	height: 22px;
 	width: 94px;
 	background-size: contain;
@@ -113,7 +97,7 @@
 				<span class="cursor"></span>
 			</p>
 			<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
-				<div class="logo" mdui-tooltip="{content: '<center>署名-非商业性使用 4.0 国际许可协议<br>(CC BY-NC 4.0)</center>'}"></div>
+				<div class="license-logo" mdui-tooltip="{content: '<center>署名-非商业性使用 4.0 国际许可协议<br>(CC BY-NC 4.0)</center>'}"></div>
 			</a>
 		</div>
 	</div>
