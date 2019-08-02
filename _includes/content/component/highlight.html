@@ -21,8 +21,5 @@ Prism.languages.yaml={scalar:{pattern:/([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.17.1/components/prism-{{ l }}.min.js"></script>
 {% endfor %}
 <script type="text/javascript">
-$("pre")
-    .wrap("<div class='sublime-card animated bounceIn delay-1s'></div>")
-    .before("<div class='sublime-card-header'><div class='red-button'></div><div class='yellow-button'></div><div class='green-button'></div></div>")
-    .addClass("line-numbers");
+$("pre").wrap("<div class='sublime-card animated bounceIn delay-1s'></div>").before("<div class='sublime-card-header'><div class='red-button'></div><div class='yellow-button'></div><div class='green-button'></div></div>").addClass("line-numbers");
 </script>

@@ -31,7 +31,7 @@
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
 <script type="text/javascript" src="{{ "/assets/js/History.js" | prepend: site.baseurl }}"></script>
 <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css" onload="this.rel='stylesheet'">
@@ -304,5 +304,5 @@ MathJax.Hub.Queue(function() {
     }
 });
 </script>
-<script src="//cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 {% endif %}
