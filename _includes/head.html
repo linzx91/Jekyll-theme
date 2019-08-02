@@ -17,12 +17,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css">
 {% endif %}
 {% endif %}
-{% for css in site.data.sources.css %}
-<link rel="stylesheet" href="{{ css }}">
-{% endfor %}
-{% for js in site.data.sources.js %}
-<script type="text/javascript" src="{{ js }}"></script>
-{% endfor %}
 <link rel="shortcut icon" href="{{ site.data.site.head.favicon }}">
 <link rel="icon" sizes="192x192" href="{{ site.data.site.head.high_res_favicon }}">
 <link rel="apple-touch-icon" href="{{ site.data.site.head.apple_touch_icon }}">
@@ -48,6 +42,12 @@
 <noscript>
 	<link rel="stylesheet" href="{{ "/assets/css/global.css" | prepend: site.baseurl }}">
 </noscript>
+{% for css in site.data.sources.css %}
+<link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+{% for js in site.data.sources.js %}
+<script type="text/javascript" src="{{ js }}"></script>
+{% endfor %}
 {% include component/nprogress.html %}
 <script>
 var defaultTitle = document.title;
