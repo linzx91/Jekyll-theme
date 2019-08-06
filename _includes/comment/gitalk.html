@@ -3,12 +3,9 @@
 #load-gitalk {
 	height:32px;
 	line-height:32px;
-	color:#424242;
-	font-size:15px;
-	font-weight:500
-}
-#gitalk-container {
-	margin:0 16px 0 16px
+	color:#6190e8;
+	font-size:1.1em;
+	font-weight: 500
 }
 </style>
 <button id="load-gitalk" class="mdui-btn mdui-btn-block mdui-ripple">「 加载 Gitalk 评论 」</button>
@@ -20,6 +17,7 @@
 $('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
 $(document).ready(function() {
     $('#load-gitalk').on('click', function() {
+        $('#gitalk-container').css('padding','0 16px 8px 16px');
         var url = '//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js';
         $.getScript(url, function() {
             var gitalk = new Gitalk({
