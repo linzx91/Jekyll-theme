@@ -6,13 +6,12 @@ layout: compress
 	<head>
 		{% include head.html %}
 	</head>
-	<body>
+	<body ontouchstart="">
 		{% include component/totop.html %}
 		{% include header/header.html %}
 		<div class="mdui-container container">
 			<section class="content">
 				{{ content }}
-				{% include content/component/highlight.html %}
 			</section>
 		</div>
 		{% if site.data.site.google_analytics != "" %}
@@ -21,7 +20,6 @@ layout: compress
 		{% if site.data.site.baidu_auto_push == true %}
 		{% include submission/baidu.html %}
 		{% endif %}
-		{% include component/sw.html %}
 		{% include component/customCssJS.html %}
 		{% include footer/footer.html %}
 		{% if site.data.site.uiux.meng == true%}
@@ -44,7 +42,7 @@ layout: compress
 				{% include meng/card.html %}
 			{% endif %}
 			{% if site.data.meng.music_player.switch == true %}
-				{% include meng/meting.html %}
+				{% include meng/music_player.html %}
 			{% endif %}
 		{% endif %}
 	</body>

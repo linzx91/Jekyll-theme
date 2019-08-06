@@ -91,3 +91,13 @@
       </div>
     <br>
 </div>
+<script>
+    $('#postpage').before('<link rel="stylesheet" type="text/css" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}?v=' + new Date().getTime() + '">');
+    $('pre').wrap('<div class="sublime-card animated bounceIn delay-1s" />').before('<div class="sublime-card-header"><div class="red-button" /><div class="yellow-button" /><div class="green-button" /></div>').addClass('line-numbers');
+    $.getScript('{{ "/assets/js/prism.js" | prepend: site.baseurl }}');
+</script>
+{% for l in site.data.site.prism.components %}
+<script>
+    $.getScript('//cdn.jsdelivr.net/npm/prismjs@1.17.1/components/prism-{{ l }}.min.js');
+</script>
+{% endfor %}

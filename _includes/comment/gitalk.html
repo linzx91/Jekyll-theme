@@ -1,0 +1,42 @@
+{% if page.key %}
+<style>
+#load-gitalk {
+	height:32px;
+	line-height:32px;
+	color:#424242;
+	font-size:15px;
+	font-weight:500
+}
+#gitalk-container {
+	margin:0 16px 0 16px
+}
+</style>
+<button id="load-gitalk" class="mdui-btn mdui-btn-block mdui-ripple">「 加载 Gitalk 评论 」</button>
+<div id="gitalk-container">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</div>
+<script>
+$('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
+$(document).ready(function() {
+    $('#load-gitalk').on('click', function() {
+        var url = '//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js';
+        $.getScript(url, function() {
+            var gitalk = new Gitalk({
+                clientID: '{{site.data.site.comment.gitalk_clientID}}',
+                clientSecret: '{{site.data.site.comment.gitalk_clientSecret}}',
+                repo: '{{site.data.site.comment.gitalk_repo}}',
+                owner: '{{site.data.site.comment.gitalk_owner}}',
+                admin: ['{{site.data.site.comment.gitalk_admin}}'],
+                id: '{{ page.key }}',
+                distractionFreeMode: false
+            });
+            gitalk.render('gitalk-container');
+        });
+        $('#load-gitalk').fadeOut('slow', function() {
+            $(this).remove();
+        });
+    });
+});
+</script>
+{% endif %}

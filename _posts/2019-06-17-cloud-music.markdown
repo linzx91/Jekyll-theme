@@ -5,6 +5,7 @@ date: 2019-06-17 17:15:00 +0800
 categories: Living
 tags: music iframe
 img: https://aligege-1259468288.file.myqcloud.com/img/2019-06-17-cloud-music.jpg
+key: 2019-06-17-cloud-music
 themecolor: "#fff"
 themetextcolor: "#000"
 describe: 

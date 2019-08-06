@@ -14,11 +14,6 @@
 		transform:translateX(calc(-100% + 20px))
 	}
 }
-@media screen and (max-width:300px) {
-	.k-music-card {
-		transform:translateX(-200%)
-	}
-}
 .aplayer {
 	background:#fff;
 	margin:0 auto;
@@ -171,7 +166,8 @@
 	box-sizing:border-box
 }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 <div class="k-music-card">
 <meting-js
 	server="{{meting.server}}"
@@ -195,6 +191,7 @@
 </div>
 </div>
 <script>
+$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">');
 $(document).on("touchstart", function(e) {
   var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 });
