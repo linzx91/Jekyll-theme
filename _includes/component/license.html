@@ -74,11 +74,16 @@
 .license-logo {
 	height:22px;
 	width:94px;
+	background-image:url(https://aligege-1259468288.file.myqcloud.com/svgs/cc-by-nc.svg);
+	border-radius:2px;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.3);
 	background-size:contain;
-	background-repeat:no-repeat;
-	padding-bottom:5px;
-	background-image:url(https://aligege-1259468288.file.myqcloud.com/svgs/cc-by-nc.svg)
+	background-repeat:no-repeat
+}
+.license-logo:hover {
+	cursor:pointer;
+	transition:filter .3s;
+	filter:brightness(1.1) contrast(110%)
 }
 </style>
 <div class="license-box animated bounceIn delay-2s">
@@ -99,9 +104,7 @@
 				转载需注明出处，且禁止用于商业目的。
 				<span class="cursor"></span>
 			</p>
-			<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
-				<div class="license-logo" mdui-tooltip="{content: '<center>署名-非商业性使用 4.0 国际许可协议<br>(CC BY-NC 4.0)</center>'}"></div>
-			</a>
+			<div class="license-logo" mdui-tooltip="{content: '<center>署名-非商业性使用 4.0 国际许可协议<br>(CC BY-NC 4.0)</center>'}" onclick="window.open('http://creativecommons.org/licenses/by-nc/4.0/')"></div>
 		</div>
 	</div>
 </div>
