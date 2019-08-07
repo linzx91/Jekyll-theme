@@ -9,7 +9,8 @@
 	line-height:40px;
 	color:#616161;
 	font-size:1.125em;
-	font-weight:500
+	font-weight:500;
+	transition:transform .5s ease
 }
 .not-open-comment {
 	width:100%;
@@ -31,7 +32,6 @@
 $('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
 $(document).ready(function() {
     $('#load-gitalk').on('click', function() {
-        $('#gitalk-container').css('padding','0 16px 8px 16px');
         var url = '//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js';
         $.getScript(url, function() {
             var gitalk = new Gitalk({
@@ -43,10 +43,12 @@ $(document).ready(function() {
                 id: '{{ page.key }}',
                 distractionFreeMode: false
             });
+            $('#gitalk-container').css('padding','0 16px 8px');
+            $('#load-gitalk').animate({height:'0'}, 'slow');
+            setTimeout(function() {
+                $('#load-gitalk').remove();
+            }, 1000);
             gitalk.render('gitalk-container');
-        });
-        $('#load-gitalk').fadeOut('slow', function() {
-            $(this).remove();
         });
     });
 });
