@@ -1,14 +1,28 @@
-{% if page.key %}
+{% if site.data.site.lang == null or site.data.site.lang == "" %}
+{% assign lang = site.data.lang.en-US %}
+{% else %}
+{% assign lang = site.data.lang[site.data.site.lang] %}
+{% endif %}
 <style>
 #load-gitalk {
+	height:40px;
+	line-height:40px;
+	color:#616161;
+	font-size:1.125em;
+	font-weight:500
+}
+.not-open-comment {
+	width:100%;
 	height:32px;
 	line-height:32px;
-	color:#6190e8;
-	font-size:1.1em;
-	font-weight: 500
+	color:#9e9e9e;
+	text-align:center;
+	font-size:0.875em;
+	font-weight:500
 }
 </style>
-<button id="load-gitalk" class="mdui-btn mdui-btn-block mdui-ripple">「 加载 Gitalk 评论 」</button>
+{% if page.key %}
+<button id="load-gitalk" class="mdui-btn mdui-btn-block mdui-ripple">{{lang.post.load_gitalk_comments}}</button>
 <div id="gitalk-container">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -37,4 +51,6 @@ $(document).ready(function() {
     });
 });
 </script>
+{% else %}
+<div class="not-open-comment">{{lang.post.not_open_comment}}</div>
 {% endif %}

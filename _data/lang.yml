@@ -27,6 +27,8 @@ zh-CN:
       qrcode: "二维码"
       qrcodeContent: "在其它设备中阅读本文章"
       comments_load_button: "阅读评论 「请确保 Disqus 可以正常加载」"
+      load_gitalk_comments: "显示评论"
+      not_open_comment: "此页面暂未提供评论功能。"
       tags: "标签"
    share:
       share: "分享"
@@ -73,6 +75,8 @@ en-US:
       qrcode: "QR Code"
       qrcodeContent: "Read this article on other devices"
       comments_load_button: "Read Comments"
+      load_gitalk_comments: "Show Comments"
+      not_open_comment: "This page does not provide comment function yet."
       tags: "Tags"
    share:
       share: "Share "
