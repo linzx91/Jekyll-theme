@@ -4,14 +4,10 @@
 {% assign lang = site.data.lang[site.data.site.lang] %}
 {% endif %}
 <style>
-.valine-comment-box {
-	margin-top: 16px;
-}
 .v .vwrap .vheader .vinput:focus {
 	border-bottom-color:#ff4081;
 }
 </style>
-<div class="valine-comment-box">
 <script>
     $(function () {
         if($('script[src="//cdn.jsdelivr.net/npm/leancloud-storage@3.0.4/dist/av-min.js"]').length === 0){
@@ -32,7 +28,10 @@
     })
 </script>
 <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
-<div style="padding:0px 16px;" class="comment"></div>
+<div style="padding:16px 16px 0;" class="comment">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</div>
 <script>
 setTimeout(function(){
     new Valine({
@@ -45,4 +44,3 @@ setTimeout(function(){
 });
 },1000)
 </script>
-</div>

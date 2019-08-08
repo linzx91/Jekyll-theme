@@ -10,7 +10,7 @@
 	color:#616161;
 	font-size:1.125em;
 	font-weight:500;
-	transition:transform .5s ease
+	transition:height .3s ease
 }
 .not-open-comment {
 	width:100%;
@@ -23,7 +23,7 @@
 }
 </style>
 {% if page.key %}
-<button id="load-gitalk" class="mdui-btn mdui-btn-block mdui-ripple">{{lang.post.load_gitalk_comments}}</button>
+<button id="load-gitalk" class="mdui-btn mdui-btn-block">{{lang.post.load_gitalk_comments}}</button>
 <div id="gitalk-container">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -44,10 +44,10 @@ $(document).ready(function() {
                 distractionFreeMode: false
             });
             $('#gitalk-container').css('padding','0 16px 8px');
-            $('#load-gitalk').animate({height:'0'}, 'slow');
+            $('#load-gitalk').css('height','0');
             setTimeout(function() {
                 $('#load-gitalk').remove();
-            }, 1000);
+            }, 400);
             gitalk.render('gitalk-container');
         });
     });
