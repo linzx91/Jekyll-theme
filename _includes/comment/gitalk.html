@@ -29,8 +29,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </div>
 <script>
-$('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
-$(document).ready(function() {
+(function() {
+    $('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
     $('#load-gitalk').on('click', function() {
         var url = '//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js';
         $.getScript(url, function() {
@@ -51,7 +51,7 @@ $(document).ready(function() {
             gitalk.render('gitalk-container');
         });
     });
-});
+})();
 </script>
 {% else %}
 <div class="not-open-comment">{{lang.post.not_open_comment}}</div>
