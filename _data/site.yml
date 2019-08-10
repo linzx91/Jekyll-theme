@@ -52,8 +52,6 @@ comment:
   gitalk_owner: "linzx91"
   gitalk_admin: "linzx91"
 
-mathjax: true
-
 google_analytics: "UA-143551483-1"  # google analytics code
 
 baidu_site_verification: ""  # baidu site verification code
