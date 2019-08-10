@@ -191,38 +191,42 @@
 </div>
 </div>
 <script>
-$('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">');
-$(document).on("touchstart", function(e) {
-  var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-});
-$(".aplayer-list").addClass("aplayer-list-hide");
-if ($(window).width() <= 600) {
-  var flag = true;
-} else {
-  var flag = false;
-}
-$(".k-music-btn").click(function() {
-  if (flag == false) {
-    $(".k-music-card").css("transform", "translateX(calc(-100% + 20px))");
-    flag = true;
-  } else if (flag == true) {
-    $(".k-music-card").css("transform", "translateX(0px)");
-    flag = false;
-  }
-  if (!$(".aplayer-list").hasClass("aplayer-list-hide")) {
+(function($) {
+    $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">');
+    $(document).on("touchstart", function(e) {
+        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+    });
     $(".aplayer-list").addClass("aplayer-list-hide");
-  }
-});
-document.addEventListener(
-  "visibilitychange",
-  function() {
-    if (document.visibilityState == "hidden") {
-      ap.pause();
+    if ($(window).width() <= 600) {
+        var flag = true;
+    } else {
+        var flag = false;
     }
-    if (document.visibilityState == "visible") {
-      ap.play();
-    }
-  },
-  false
-);
+    $(".k-music-btn").click(function() {
+        if (flag == false) {
+            $(".k-music-card").css("transform", "translateX(calc(-100% + 20px))");
+            flag = true;
+        } else if (flag == true) {
+            $(".k-music-card").css("transform", "translateX(0px)");
+            flag = false;
+        }
+        if (!$(".aplayer-list").hasClass("aplayer-list-hide")) {
+            $(".aplayer-list").addClass("aplayer-list-hide");
+        }
+    });
+})(jQuery);
+!function() {
+    document.addEventListener(
+        "visibilitychange",
+        function() {
+            if (document.visibilityState == "hidden") {
+                ap.pause();
+            }
+            if (document.visibilityState == "visible") {
+                ap.play();
+            }
+        },
+        false
+    );
+}();
 </script>
