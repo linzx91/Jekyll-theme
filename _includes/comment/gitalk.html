@@ -24,10 +24,7 @@
 </style>
 {% if page.key %}
 <button id="load-gitalk" class="mdui-btn mdui-btn-block">{{lang.post.load_gitalk_comments}}</button>
-<div id="gitalk-container">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-</div>
+<div id="gitalk-container"></div>
 <script>
 (function() {
     $('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
