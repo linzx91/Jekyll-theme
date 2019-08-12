@@ -1,5 +1,4 @@
 <script>
-    
     {% if site.data.meng.title.with_default_title == true %}
     var hiddenText = '{{site.data.meng.title.hidden}}' +' '+ defaultTitle;
     var visibleText = '{{site.data.meng.title.visible}}' +' '+ defaultTitle;
@@ -9,7 +8,7 @@
     {% endif %}
     var resetTime = {{site.data.meng.title.reset_time}};
     document.addEventListener("visibilitychange", function() {
-	    if(document.visibilityState == "hidden" ){
+        if(document.visibilityState == "hidden" ){
             document.title = hiddenText;
         }
         if(document.visibilityState == "visible"){

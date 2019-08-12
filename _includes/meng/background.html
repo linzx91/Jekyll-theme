@@ -12,12 +12,11 @@ body {
 	color: {{site.data.meng.background.text_color}};
 }
 </style>
-
 {% if site.data.meng.background.transparent_header == true %}
 <style>
 header {
-    background-color: rgba(245, 245, 245, 0.8);
-    color: {{site.data.meng.background.text_color}};
+	background-color: rgba(245, 245, 245, 0.8);
+	color: {{site.data.meng.background.text_color}};
 }
 @supports (-webkit-backdrop-filter: brightness(110%) blur(16px)) or (backdrop-filter: brightness(110%) blur(16px)){
 header {
@@ -46,7 +45,7 @@ footer .mdui-card {
 {% endif %}
 
 {% if site.data.meng.background.animation == true %}
-<script>
+<script type="text/javascript">
 (function(name,factory){if(typeof window==="object"){window[name]=factory()}})("Ribbons",function(){var _w=window,_b=document.body,_d=document.documentElement;var random=function(){if(arguments.length===1){if(Array.isArray(arguments[0])){var index=Math.round(random(0,arguments[0].length-1));return arguments[0][index]}
 return random(0,arguments[0])}
 else if(arguments.length===2){return Math.random()*(arguments[1]-arguments[0])+arguments[0]}
@@ -70,6 +69,6 @@ return!1},_onDraw:function(){for(var i=0,t=this._ribbons.length;i<t;++i){if(!thi
 this._context.clearRect(0,0,this._width,this._height);for(var a=0;a<this._ribbons.length;++a){var ribbon=this._ribbons[a],numSections=ribbon.length,numDone=0;for(var b=0;b<numSections;++b){if(this._drawRibbonSection(ribbon[b])){numDone++}}
 if(numDone>=numSections){this._ribbons[a]=null}}
 if(this._ribbons.length<this._options.ribbonCount){this.addRibbon()}
-requestAnimationFrame(this._onDraw)},_onResize:function(e){var screen=screenInfo(e);this._width=screen.width;this._height=screen.height;if(this._canvas){this._canvas.width=this._width;this._canvas.height=this._height;if(this._context){this._context.globalAlpha=this._options.colorAlpha}}},_onScroll:function(e){var screen=screenInfo(e);this._scroll=screen.scrolly}};return Factory});new Ribbons({colorSaturation:"60%",colorBrightness:"50%",colorAlpha:0.5,colorCycleSpeed:5,verticalPosition:"random",horizontalSpeed:200,ribbonCount:3,strokeSize:0,parallaxAmount:-0.2,animateSections:!0})
+requestAnimationFrame(this._onDraw)},_onResize:function(e){var screen=screenInfo(e);this._width=screen.width;this._height=screen.height;if(this._canvas){this._canvas.width=this._width;this._canvas.height=this._height;if(this._context){this._context.globalAlpha=this._options.colorAlpha}}},_onScroll:function(e){var screen=screenInfo(e);this._scroll=screen.scrolly}};return Factory});new Ribbons({colorSaturation:"60%",colorBrightness:"50%",colorAlpha:0.5,colorCycleSpeed:5,verticalPosition:"random",horizontalSpeed:200,ribbonCount:3,strokeSize:0,parallaxAmount:-0.2,animateSections:!0});
 </script>
 {% endif %}

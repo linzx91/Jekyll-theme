@@ -73,15 +73,15 @@
     </div>
 {% endfor %}
 </div>
-    {% include content/component/lazyload.html %}
-      <script>
-    Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
-        var b = a.querySelector("a");
-        if (!b) {
-            return
-        }
-        a.addEventListener("click", function() {
-            b.click();
-        })
-    });
-  </script>
+{% include content/component/lazyload.html %}
+<script type="text/javascript">
+Array.prototype.forEach.call(document.querySelectorAll(".mdui-card-media"), function(a) {
+    var b = a.querySelector("a");
+    if (!b) {
+        return
+    };
+    a.addEventListener("click", function() {
+        b.click()
+    })
+});
+</script>
