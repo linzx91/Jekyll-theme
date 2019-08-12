@@ -16,7 +16,7 @@
 {% if site.data.site.uiux.meng == true %}
 {% if site.data.meng.animation.switch
 == true %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 {% endif %}
 {% endif %}
 <link rel="shortcut icon" href="{{ site.data.site.head.favicon }}">
@@ -33,24 +33,17 @@
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
-<script type="text/javascript" src="{{ '/assets/js/History.js' | prepend: site.baseurl }}"></script>
 <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css" onload="this.rel='stylesheet'">
 <link rel="preload" as="style" href="{{ '/assets/css/global.css' | prepend: site.baseurl }}" onload="this.rel='stylesheet'">
-<noscript>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-</noscript>
-<noscript>
-	<link rel="stylesheet" href="{{ '/assets/css/global.css' | prepend: site.baseurl }}">
-</noscript>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="{{ '/assets/js/History.js' | prepend: site.baseurl }}"></script>
 {% include component/nprogress.html %}
-<script>
-var defaultTitle = document.title;
-var imgzoom = false;
-var tagid;
+<script type="text/javascript">
 $(document).ready(function() {
-
+    var defaultTitle = document.title;
+    var imgzoom = false;
+    var tagid;
     var siteUrl = 'http://' + (document.location.hostname || document.location.host);
     var disqusstatus = {
         flag: false,
@@ -67,25 +60,23 @@ $(document).ready(function() {
         var State = History.getState();
         $.get(State.url, function(data) {
             $('.mdui-tooltip').remove();
-            $(".mdui-container").fadeOut(300, function() {
+            $('.mdui-container').fadeOut(300, function() {
                 $('.container').html($(data).find('.content'));
                 document.title = data.match(/<title>(.*?)<\/title>/)[1];
                 defaultTitle = document.title;
                 NProgress.done();
                 $('#k-menus').html($(data).find('#k-menus').children());
                 $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children());
-                $(".content").css('top', '50px');
-                $(".content").css('position', 'relative');
-                $(".mdui-container").fadeIn();
-                $(".content").animate({
+                $('.content').css('top', '50px');
+                $('.content').css('position', 'relative');
+                $('.mdui-container').fadeIn();
+                $('.content').animate({
                     top: '0px'
                 });
             });
         });
     });
 });
-</script>
-<script>
 !function(a) {
     "use strict";
     var b = function(b, c, d) {
