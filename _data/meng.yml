@@ -50,9 +50,9 @@ animation: # animate.css, see https://github.com/daneden/animate.css
 
 music_player:
   switch: true
-  server: "tencent" # music platform: netease, tencent, kugou, xiami, baidu
+  server: "netease" # music platform: netease, tencent, kugou, xiami, baidu
   type: "playlist" # song, playlist, album, search, artist
-  id: "1692791868" # song id / playlist id / album id / search keyword
+  id: "2278690100" # song id / playlist id / album id / search keyword
   autoplay: "false" # audio autoplay
   theme: "#15c8ad" # main color
   loop: "all" # player loop play, values: 'all', 'one', 'none'
