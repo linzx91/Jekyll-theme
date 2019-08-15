@@ -34,7 +34,7 @@ src="//music.163.com/outchain/player?type=2&id={{ page.music-id }}&auto=1&height
 ```
 {% endraw %}
 
-然后在需要添加音乐的文章开头的 YMAL 配置项添加`music-id: // 网易云音乐的歌曲id` 如下所示：
+然后在需要添加音乐的文章开头的 YAML 配置项添加`music-id: // 网易云音乐的歌曲id` 如下所示：
 
 ```yml
 ---
@@ -62,4 +62,4 @@ src="//music.163.com/outchain/player?type=2&id={{ page.music-id }}&auto=1&height
 ```
 {% endraw %}
 
-同样在需要添加音乐的博客文章开头的 YMAL 配置项添加`music-id: // 网易云音乐的歌曲id`
+同样在需要添加音乐的博客文章开头的 YAML 配置项添加`music-id: // 网易云音乐的歌曲id`
