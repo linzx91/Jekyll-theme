@@ -17,7 +17,7 @@
     <div class="k-posts-list"></div>
     <div class="mdui-row">
         <div class="mdui-col-sm-12 k-page-col">
-            <div class="mdui-card k-postcontent">
+            <div class="animated bounceInDown mdui-card k-postcontent">
                 {% if page.img == "" or page.img == null %}
                 <div class="mdui-card-media mdui-ripple k-post-media mdui-valign k-noimg">
                     <h1><a>{{page.title}}</a></h1>
@@ -60,7 +60,9 @@
                 {% include content/component/lastupdate.html %}
                 <div class="mdui-card-content mdui-typo">
                     {{ content }}
+                    {% include content/component/license.html %}
                 </div>
+                {% include content/component/new_old.html %}
                 {% include comment/comment.html %}
             </div>
         </div>
@@ -68,3 +70,6 @@
     <br>
 </div>
 {% include content/component/highlight.html %}
+{% if page.mathjax == true %}
+{% include content/component/mathjax.html %}
+{% endif %}
