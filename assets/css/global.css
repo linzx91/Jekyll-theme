@@ -59,8 +59,12 @@ h1.mdui-card-primary-title {
 .mdui-typo pre,.mdui-typo code,.mdui-typo kbd,.mdui-typo samp,.mdui-typo pre tt {
 	font-family:'Source Code Pro',Consolas,Courier,'Courier New',monospace
 }
-body,header {
-	background-color:{{site.data.site.background.purecolor}}
+body {
+	display:flex;
+	min-height:100vh;
+	flex-direction:column;
+	background-color:{{site.data.site.background.purecolor}};
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
 }
 ::-webkit-scrollbar {
 	width:10px
@@ -70,12 +74,6 @@ body,header {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 	background:rgba(0,0,255,.4)
-}
-body {
-	display:flex;
-	min-height:100vh;
-	flex-direction:column;
-	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
 }
 .container {
 	flex:1 0 auto

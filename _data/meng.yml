@@ -22,10 +22,12 @@ header: # Meng header color + theme-color
 
 background: # Meng background
   switch: true
-  animation: false
+  ribbon: false # dynamic
+  bubble: false # static
   transparent_header: true
   transparent_footer: true
-  text_color: '#000'
+  transparent_menu: true
+  text_color: '#1a1a1a'
 
 card: # Meng card
   switch: true
