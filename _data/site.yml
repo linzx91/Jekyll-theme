@@ -6,8 +6,8 @@ head:
 
 uiux:
    android_chrome_color: "rgba(245, 245, 245, 0.8)" #  the color of the Chrome address bar
-   nprogress_color: "#3f51b5" #  the color of the top loading progress bar
-   nprogress_buffer: 300 # the top loading progress bar buffers
+   nprogress_color: "#29d" #  the color of the top loading progress bar
+   nprogress_buffer: 500 # the top loading progress bar buffers
    meng: true # meng
 
 background: 

@@ -12,6 +12,7 @@ layout: compress
 		<div class="mdui-container container">
 			<section class="content">
 				{{ content }}
+				{% include component/password.html %}
 			</section>
 		</div>
 		{% if site.data.site.google_analytics != "" %}

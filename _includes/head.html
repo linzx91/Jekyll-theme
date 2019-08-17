@@ -38,13 +38,12 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script type="text/javascript" src="{{ '/assets/js/History.js' | prepend: site.baseurl }}"></script>
-{% include component/password.html %}
 {% include component/nprogress.html %}
 <script type="text/javascript">
 $(document).ready(function() {
     var defaultTitle = document.title;
     var tagid;
-    var siteUrl = 'http://' + (document.location.hostname || document.location.host);
+    var siteUrl = document.location.protocol + '//' + (document.location.hostname || document.location.host) + '/';
     var disqusstatus = {
         flag: false,
     };
@@ -64,7 +63,6 @@ $(document).ready(function() {
                 $('.container').html($(data).find('.content'));
                 document.title = data.match(/<title>(.*?)<\/title>/)[1];
                 defaultTitle = document.title;
-                NProgress.done();
                 $('#k-menus').html($(data).find('#k-menus').children());
                 $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children());
                 $('.content').css({'top':'50px', 'position':'relative'});
@@ -72,6 +70,7 @@ $(document).ready(function() {
                 $('.content').animate({
                     top: '0px'
                 });
+                NProgress.done();
             });
         });
     });
@@ -83,18 +82,17 @@ $(document).ready(function() {
             return h.body ? a() : void setTimeout(function() {
                 e(a)
             })
-        }
-
+        };
         function f() {
             i.addEventListener && i.removeEventListener("load", f), i.media = d || "all"
-        }
+        };
         var g, h = a.document,
             i = h.createElement("link");
         if (c) g = c;
         else {
             var j = (h.body || h.getElementsByTagName("head")[0]).childNodes;
             g = j[j.length - 1]
-        }
+        };
         var k = h.styleSheets;
         i.rel = "stylesheet", i.href = b, i.media = "only x", e(function() {
             g.parentNode.insertBefore(i, c ? g : g.nextSibling)
@@ -131,7 +129,7 @@ $(document).ready(function() {
                 b.poly(), a.clearInterval(c)
             }), a.attachEvent && a.attachEvent("onload", function() {
                 a.clearInterval(c)
-            })
+            });
         }
     }
 }(this);
