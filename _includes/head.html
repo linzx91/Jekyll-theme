@@ -47,17 +47,19 @@ $(document).ready(function() {
     var disqusstatus = {
         flag: false,
     };
+    var inst = new mdui.Drawer('#k-menu');
     $(document).delegate('a[href^="/"][target!="_blank"], a[href^="' + siteUrl + '"]', 'click', function(e) {
         if (e.currentTarget.id.indexOf('tag_') === 0) {
             tagid = e.currentTarget.id.replace(/tag_/, "");
         }
         e.preventDefault();
         History.pushState({}, "", this.pathname);
-        NProgress.start();
     });
     History.Adapter.bind(window, 'statechange', function() {
         var State = History.getState();
+        NProgress.start();
         $.get(State.url, function(data) {
+            inst.close();
             $('.mdui-tooltip').remove();
             $('.mdui-container').fadeOut(300, function() {
                 $('.container').html($(data).find('.content'));
