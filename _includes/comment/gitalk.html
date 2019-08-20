@@ -24,7 +24,7 @@
 </style>
 {% if page.key %}
 <button id="load-gitalk" class="mdui-btn mdui-btn-block">{{lang.post.load_gitalk_comments}}</button>
-<div id="gitalk-container"></div>
+<div id="gitalk-container" style="padding: 0 16px 8px; display: none;"></div>
 <script>
 (function($) {
     $('#gitalk-container').before('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.css?v=' + new Date().getTime() + '">');
@@ -40,7 +40,7 @@
                 id: '{{ page.key }}',
                 distractionFreeMode: false
             });
-            $('#gitalk-container').css('padding','0 16px 8px');
+            $('#gitalk-container').css('display','block');
             $('#load-gitalk').css('height','0');
             setTimeout(function() {
                 $('#load-gitalk').remove();
