@@ -2,7 +2,7 @@
 <style>
 .music-card {
 	position:fixed;
-	top:25%;
+	top:20%;
 	left:0;
 	display:flex;
 	flex-flow:row nowrap;
@@ -105,32 +105,11 @@
 	justify-content:center;
 	align-items:center;
 	cursor:pointer;
-	background:linear-gradient(to bottom right,#414345,#232526);
+	background:{{meting.btn_color}};
 	-webkit-user-select:none;
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none
-}
-.music-btn:after {
-	content:"";
-	display:block;
-	position:absolute;
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	pointer-events:none;
-	background-image:radial-gradient(circle,#fff 10%,transparent 10.01%);
-	background-repeat:no-repeat;
-	background-position:50%;
-	transform:scale(10,10);
-	opacity:0;
-	transition:transform .3s,opacity .5s
-}
-.music-btn:active:after {
-	transform:scale(0,0);
-	opacity:.3;
-	transition:0s
 }
 .music-btn .btn-indicator {
 	width:12px;
@@ -178,45 +157,83 @@
 		<div class="btn-indicator"></div>
 	</div>
 </div>
-<script>
+<script type="text/javascript">
 (function($) {
-    $("head").append("<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css'>");
-    $(document).on("touchstart", function(e) {
-        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-    });
+  $("head").append("<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css'>");
+  $(document).ready(function() {
     $(".aplayer-list").addClass("aplayer-list-hide");
     if ($(window).width() <= 600) {
-        var flag = true;
+      var flag = true;
     } else {
-        var flag = false;
+      var flag = false;
     }
-    $(".music-btn").on("click", function() {
-        if (flag == false) {
-            $(".music-card").css("transform", "translateX(calc(-100% + 20px))");
-            $(".btn-indicator").css("transform","rotate(0deg)");
-            flag = true;
-        } else if (flag == true) {
-            $(".music-card").css("transform", "translateX(0px)");
-            $(".btn-indicator").css("transform","rotate(180deg)");
-            flag = false;
-        }
-        if (!$(".aplayer-list").hasClass("aplayer-list-hide")) {
-            $(".aplayer-list").addClass("aplayer-list-hide");
-        }
+    $(".music-btn").on("click", function(e) {
+      if ($(this).find("#wave").length) {
+        $(this)
+          .find("#wave")
+          .remove();
+      }
+      $(this).append("<div id='wave'></div>");
+      var wave = $(this).find("#wave");
+      wave.css({
+        display: "block",
+        background: "{{meting.ripple_color}}",
+        "border-radius": "50%",
+        position: "absolute",
+        "-webkit-transform": "scale(0)",
+        transform: "scale(0)",
+        opacity: "1",
+        "-webkit-transition": "all 0.7s",
+        "-moz-transition": "all 0.7s",
+        "-o-transition": "all 0.7s",
+        transition: "all 0.7s",
+        "z-index": "1",
+        overflow: "hidden",
+        "pointer-events": "none"
+      });
+      waveWidth = parseInt($(this).outerWidth());
+      waveHeight = parseInt($(this).outerHeight());
+      if (waveWidth < waveHeight) {
+        var R = waveHeight;
+      } else {
+        var R = waveWidth;
+      }
+      wave.css({
+        width: R * 2 + "px",
+        height: R * 2 + "px",
+        top: e.pageY - $(this).offset().top - R + "px",
+        left: e.pageX - $(this).offset().left - R + "px",
+        transform: "scale(1)",
+        "-webkit-transform": "scale(1)",
+        opacity: "0"
+      });
+      if (flag == false) {
+        $(".music-card").css("transform", "translateX(calc(-100% + 20px))");
+        $(".btn-indicator").css("transform", "rotate(0deg)");
+        flag = true;
+      } else if (flag == true) {
+        $(".music-card").css("transform", "translateX(0px)");
+        $(".btn-indicator").css("transform", "rotate(180deg)");
+        flag = false;
+      }
+      if (!$(".aplayer-list").hasClass("aplayer-list-hide")) {
+        $(".aplayer-list").addClass("aplayer-list-hide");
+      }
     });
+  });
 })(jQuery);
-!function() {
-    document.addEventListener(
-        "visibilitychange",
-        function() {
-            if (document.visibilityState == "hidden") {
-                ap.pause();
-            }
-            if (document.visibilityState == "visible") {
-                ap.play();
-            }
-        },
-        false
-    );
-}();
+!(function() {
+  document.addEventListener(
+    "visibilitychange",
+    function() {
+      if (document.visibilityState == "hidden") {
+        ap.pause();
+      }
+      if (document.visibilityState == "visible") {
+        ap.play();
+      }
+    },
+    false
+  );
+})();
 </script>

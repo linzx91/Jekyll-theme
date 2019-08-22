@@ -62,6 +62,8 @@ music_player:
   preload: "auto" # values: 'none', 'metadata', 'auto'
   volume: "0.7" # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
   mutex: "true" # prevent to play multiple player at the same time, pause other players when this player start play
+  btn_color: "linear-gradient(to bottom right,#414345,#232526)" # button color
+  ripple_color: "rgba(255,255,255,0.7)" # button clicks transition effect color
 
 head_card:
   switch: true
