@@ -180,12 +180,8 @@
         background: "{{meting.ripple_color}}",
         "border-radius": "50%",
         position: "absolute",
-        "-webkit-transform": "scale(0)",
         transform: "scale(0)",
         opacity: "1",
-        "-webkit-transition": "all 0.7s",
-        "-moz-transition": "all 0.7s",
-        "-o-transition": "all 0.7s",
         transition: "all 0.7s",
         "z-index": "1",
         overflow: "hidden",
@@ -204,7 +200,6 @@
         top: e.pageY - $(this).offset().top - R + "px",
         left: e.pageX - $(this).offset().left - R + "px",
         transform: "scale(1)",
-        "-webkit-transform": "scale(1)",
         opacity: "0"
       });
       if (flag == false) {
