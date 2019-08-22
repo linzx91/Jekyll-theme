@@ -41,98 +41,131 @@
 {% include component/nprogress.html %}
 <script type="text/javascript">
 $(document).ready(function() {
-    var defaultTitle = document.title;
-    var tagid;
-    var siteUrl = document.location.protocol + '//' + (document.location.hostname || document.location.host) + '/';
-    var disqusstatus = {
-        flag: false,
-    };
-    var inst = new mdui.Drawer('#k-menu');
-    $(document).delegate('a[href^="/"][target!="_blank"], a[href^="' + siteUrl + '"]', 'click', function(e) {
-        if (e.currentTarget.id.indexOf('tag_') === 0) {
-            tagid = e.currentTarget.id.replace(/tag_/, "");
-        }
-        e.preventDefault();
-        History.pushState({}, "", this.pathname);
-    });
-    History.Adapter.bind(window, 'statechange', function() {
-        var State = History.getState();
-        NProgress.start();
-        $.get(State.url, function(data) {
-            inst.close();
-            $('.mdui-tooltip').remove();
-            $('.mdui-container').fadeOut(300, function() {
-                $('.container').html($(data).find('.content'));
-                document.title = data.match(/<title>(.*?)<\/title>/)[1];
-                defaultTitle = document.title;
-                $('#k-menus').html($(data).find('#k-menus').children());
-                $('#k-mobile-menus').html($(data).find('#k-mobile-menus').children());
-                $('.content').css({'top':'50px', 'position':'relative'});
-                $('.mdui-container').fadeIn();
-                $('.content').animate({
-                    top: '0px'
-                });
-                NProgress.done();
-            });
-        });
-    });
-});
-!function(a) {
-    "use strict";
-    var b = function(b, c, d) {
-        function e(a) {
-            return h.body ? a() : void setTimeout(function() {
-                e(a)
-            })
-        };
-        function f() {
-            i.addEventListener && i.removeEventListener("load", f), i.media = d || "all"
-        };
-        var g, h = a.document,
-            i = h.createElement("link");
-        if (c) g = c;
-        else {
-            var j = (h.body || h.getElementsByTagName("head")[0]).childNodes;
-            g = j[j.length - 1]
-        };
-        var k = h.styleSheets;
-        i.rel = "stylesheet", i.href = b, i.media = "only x", e(function() {
-            g.parentNode.insertBefore(i, c ? g : g.nextSibling)
-        });
-        var l = function(a) {
-            for (var b = i.href, c = k.length; c--;)
-                if (k[c].href === b) return a();
-            setTimeout(function() {
-                l(a)
-            })
-        };
-        return i.addEventListener && i.addEventListener("load", f), i.onloadcssdefined = l, l(f), i
-    };
-    "undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
-}("undefined" != typeof global ? global : this);
-!function(a) {
-    if (a.loadCSS) {
-        var b = loadCSS.relpreload = {};
-        if (b.support = function() {
-            try {
-                return a.document.createElement("link").relList.supports("preload")
-            } catch (b) {
-                return !1
-            }
-        }, b.poly = function() {
-            for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
-                var d = b[c];
-                "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null)
-            }
-        }, !b.support()) {
-            b.poly();
-            var c = a.setInterval(b.poly, 300);
-            a.addEventListener && a.addEventListener("load", function() {
-                b.poly(), a.clearInterval(c)
-            }), a.attachEvent && a.attachEvent("onload", function() {
-                a.clearInterval(c)
-            });
-        }
+  var defaultTitle = document.title;
+  var tagid;
+  var siteUrl = document.location.protocol + "//" + (document.location.hostname || document.location.host) + "/";
+  var disqusstatus = {
+    flag: false
+  };
+  var inst = new mdui.Drawer("#k-menu");
+  $(document).delegate('a[href^="/"][target!="_blank"], a[href^="' + siteUrl + '"]', "click", function(e) {
+      if (e.currentTarget.id.indexOf("tag_") === 0) {
+        tagid = e.currentTarget.id.replace(/tag_/, "");
+      }
+      e.preventDefault();
+      History.pushState({}, "", this.pathname);
     }
-}(this);
+  );
+  History.Adapter.bind(window, "statechange", function() {
+    var State = History.getState();
+    $.get(State.url, function(data) {
+      NProgress.start();
+      inst.close();
+      $(".mdui-tooltip").remove();
+      $(".mdui-container").fadeOut(300, function() {
+        $(".container").html($(data).find(".content"));
+        document.title = data.match(/<title>(.*?)<\/title>/)[1];
+        defaultTitle = document.title;
+        $("#k-menus").html(
+          $(data)
+            .find("#k-menus")
+            .children()
+        );
+        $("#k-mobile-menus").html(
+          $(data)
+            .find("#k-mobile-menus")
+            .children()
+        );
+        $(".content").css({ top: "50px", position: "relative" });
+        $(".mdui-container").fadeIn();
+        $(".content").animate({
+          top: "0px"
+        });
+        NProgress.done();
+      });
+    });
+  });
+});
+(function(a) {
+  "use strict";
+  var b = function(b, c, d) {
+    function e(a) {
+      return h.body
+        ? a()
+        : void setTimeout(function() {
+            e(a);
+          });
+    }
+    function f() {
+      i.addEventListener && i.removeEventListener("load", f),
+        (i.media = d || "all");
+    }
+    var g,
+      h = a.document,
+      i = h.createElement("link");
+    if (c) g = c;
+    else {
+      var j = (h.body || h.getElementsByTagName("head")[0]).childNodes;
+      g = j[j.length - 1];
+    }
+    var k = h.styleSheets;
+    (i.rel = "stylesheet"),
+      (i.href = b),
+      (i.media = "only x"),
+      e(function() {
+        g.parentNode.insertBefore(i, c ? g : g.nextSibling);
+      });
+    var l = function(a) {
+      for (var b = i.href, c = k.length; c--; ) if (k[c].href === b) return a();
+      setTimeout(function() {
+        l(a);
+      });
+    };
+    return (
+      i.addEventListener && i.addEventListener("load", f),
+      (i.onloadcssdefined = l),
+      l(f),
+      i
+    );
+  };
+  "undefined" != typeof exports ? (exports.loadCSS = b) : (a.loadCSS = b);
+})("undefined" != typeof global ? global : this);
+(function(a) {
+  if (a.loadCSS) {
+    var b = (loadCSS.relpreload = {});
+    if (
+      ((b.support = function() {
+        try {
+          return a.document.createElement("link").relList.supports("preload");
+        } catch (b) {
+          return !1;
+        }
+      }),
+      (b.poly = function() {
+        for (
+          var b = a.document.getElementsByTagName("link"), c = 0;
+          c < b.length;
+          c++
+        ) {
+          var d = b[c];
+          "preload" === d.rel &&
+            "style" === d.getAttribute("as") &&
+            (a.loadCSS(d.href, d, d.getAttribute("media")), (d.rel = null));
+        }
+      }),
+      !b.support())
+    ) {
+      b.poly();
+      var c = a.setInterval(b.poly, 300);
+      a.addEventListener &&
+        a.addEventListener("load", function() {
+          b.poly(), a.clearInterval(c);
+        }),
+        a.attachEvent &&
+          a.attachEvent("onload", function() {
+            a.clearInterval(c);
+          });
+    }
+  }
+})(this);
 </script>
